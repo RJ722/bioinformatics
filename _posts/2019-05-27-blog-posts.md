@@ -4,10 +4,6 @@ title: "Announcing new blog series on Deep Learning"
 categories: blog
 ---
 
-<i> **TLDR**: I'm gonna be digitizing my notes from Andrew Ng's course -
-[deeplearning.ai][dl] as a series of blog posts over the next few days. [ Stay
-tuned! ][newsletter] :) </i>
-
 <!--more-->
 
 ## Background
