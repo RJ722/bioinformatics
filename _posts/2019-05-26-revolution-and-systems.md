@@ -142,9 +142,9 @@ In response to the [Rowlatt Act][rowlatt] imposed by the British and the
 [Jallianwala Bagh Massacre][jallianwala], Gandhi lead the non-cooperation
 movement, appealing to the masses to adopt swadeshi goods and local handicrafts
 to boycott British goods. The movement was based on the principle of _Ahimsa_
-(Non-Violence), and after two years of hard work, it gained full momentum in
-1922. It seemed that the dream of _Swaraj_ (self-governance) was finally turning
-to reality.
+(Non-Violence), and after two years of hard work, it gained full momentum
+in 1922. It seemed that the dream of _Swaraj_ (self-governance) was finally
+turning to reality.
 
 But giving a face to Gandhi's fears, cases of violence were reported from
 all over the nation, and after the [Chauri-Chaura][chaurichaura]
