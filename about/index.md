@@ -65,8 +65,7 @@ speak about whatever she's been working on lately.
 I was invited as a speaker in PyCon India 2017 where I spoke about **"Reducing
 Dead Code Ratio of Python Projects using vulture"**. In the same conference, I
 also delivered a lightening talk on **"coala - What, Why and How?"** and met quite a
-few celebrities in the Python community and made a lot of friends during the
-same conference.
+few celebrities in the Python community and made a lot of friends.
 
 I also gave a similar talk, titled **"Scavenging Dead Code using Vulture"** at
 DevConf, India 2018 and was also invited to DevConf, Czech but could not visit
