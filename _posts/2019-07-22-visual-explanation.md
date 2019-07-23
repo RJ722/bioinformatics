@@ -4,8 +4,8 @@ title: "The [deceptive] power of visual explanation"
 categories: blog
 ---
 
-Quite recently, I came across Jacob Gill's, rather beautiful blog post, ["A
-Visual Intro to Numpy & Data Representation"][visualnumpy].
+Quite recently, I came across Jay Alammar's, rather beautiful blog post, ["A
+Visual Intro to NumPy & Data Representation"][visualnumpy].
 
 Before reading this, whenever I had to think about an array:
 
@@ -27,13 +27,13 @@ data = │  1 │  2 │  3 │
        └────┴────┴────┘
 ```
 
-But Jacob, on the other hand, uses a vertical stack for representing the same array.
+But Jay, on the other hand, uses a vertical stack for representing the same array.
 
 {% fullwidth 'https://jalammar.github.io/images/numpy/numpy-array.png' "Image
-from <a href='https://jalammar.github.io/visual-numpy/'> Jacob's blog post. </a>
+from <a href='https://jalammar.github.io/visual-numpy/'> Jay's blog post. </a>
 " %}
 
-At the first glance, and owing to the beautiful graphics Jacob has created, it
+At the first glance, and owing to the beautiful graphics Jay has created, it
 makes perfect sense.
 
 Now, if you had only seen this image, and I ask you the dimensions of `data`,
@@ -41,7 +41,7 @@ what would your answer be?
 
 The mathematician inside you barks `(3, 1)`.
 
-But, to my surpirse, this wasn't the answer:
+But, to my surprise, this wasn't the answer:
 
 ```python
 
@@ -144,8 +144,8 @@ So, what about the horizontal representation?
 
 An argument can be made that the horizontal representation can be misinterpreted
 as a `(1, 3)` matrix, our brains are so accustomed to seeing it as 1-D array,
-that it almost never the case (at least with folks who have worked with Python
-before).
+that it is almost never the case (at least with folks who have worked with
+Python before).
 
 Of course, it all makes perfect sense now, but it did take me a while to figure
 out what exactly was going under the hood here.
@@ -155,23 +155,22 @@ Explanation of Fourier Series - Decomposition of a square wave into a sum of
 infinite sinusoids. From <a href='https://math.stackexchange.com/a/736986'> this
 answer on math.stackexchange.com</a> " %}
 
-I also realized that while it is hugely helpful to visualize something when
-learning, but, you one take the visual representation with a grain of salt. As
-[we can see, they are not entirely accurate][proves]. But, to counter that,
-[here][true] are some awesome visual proves which you would definitely find
-interesting.
+I also realized that while it is [ hugely helpful to visualize ][true] something
+when learning about it, but one should always take the visual representation
+with a grain of salt. As [we can see, they are not entirely accurate][proves].
 
-For now, I'm sticking to my prior way of picturing a 1-D array - a horizontal
-list - to avoid the confusion. I shall update the blog if I find something
+For now, I'm sticking to my prior way of picturing a 1-D array as a horizontal
+list to avoid the confusion. I shall update the blog if I find anything
 otherwise.
 
-My point is not that Jacob's drawings are flawed, but how susceptible we are to
+My point is _not_ that Jay's drawings are flawed, but how susceptible we are to
 visual deceptions. In this case, it was relatively easier to figure out, because
-it was code, which pays attention to each and every detail.
+it was code, which forces one to pay attention to each and every detail, however
+minor it may be.
 
-But, our human brain, which is prone to so many biases and takes shortcuts
-for nearly every decision we make (and thus leaves enough room for us to
-maintain sanity) isn't anywhere near as perfect as it thinks it is.
+After all, human brain, prone to so many biases, taking shortcuts for nearly
+every decision we make (thus leaving room for sanity) isn't anywhere near as
+perfect as it thinks it is.
 
 [visualnumpy]: https://jalammar.github.io/visual-numpy/
 [stackoverflow]: https://stackoverflow.com/a/22074424/6426752
