@@ -16,7 +16,7 @@ I made a mental note of typing this out tomorrow and putting it up on my blog.
 
 I wanted to do this when we said our final goodbyes and you left for the States, but thank God, I didn't - I knew that I would miss you, but never could I have guessed that it would be so overwhelming - I would've never written it as passionately as I do today.
 
-For people who don't already know him, here's a picture:
+For those of you who don't already know him, here's a picture:
 
 ![Omar Khursheed](https://i.imgur.com/f5GRyet.png)
 
