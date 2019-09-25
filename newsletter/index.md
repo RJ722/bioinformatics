@@ -11,9 +11,6 @@ through this newsletter.
 {% maincolumn 'assets/img/newsletter.jpg' '' %}
 
 
-{% marginfigure 'mf-id-form' 'assets/img/fillform.jpg' 'The damn <a href="https://tinyletter.com/rj722">
-form! </a>' %}
-
 The content mostly revolves around the theme of - <i> open source software,
 artificial intelligence, mathematics </i> and occasionally about <i> history,
 politics or Urdu. </i>
