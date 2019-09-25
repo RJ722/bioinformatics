@@ -30,7 +30,7 @@ Well, let's start with this - thanks for kicking me on my behind, albeit civilly
 
 I still can't quite get how you tolerated the bigot I was and managed to be calm and polite. Thanks for teaching me what tolerance is!
 
-Another thing which I learnt from you was what it meant to be privileged. I can no longer to see things the way I used to, and this has made a huge difference. Thank You!
+Another thing which I learnt from you was what it meant to be privileged. I can no longer see things the way I used to, and this has made a huge difference. Thank You!
 
 I saw you through your bad times and your good. The way you tackled problems, and how easy you made it look. Well, it taught me [_drum roll_] how to think (before acting and not the other way round). Thanks for that too!
 
