@@ -4,8 +4,6 @@ title : "A panegyric about my mentor, Omar Bhai"
 categories: blog
 ---
 
-The clock ticks 2 AM.
-
 I was still up at this unearthly hour, thinking about life for a while now - fumbled thoughts about where I had come, where I started, and quite expectedly, Omar Bhai, your name popped in.
 
 The stream continued. I started thinking about everything I've learned from you and was surprised with merely the sheer volume of thoughts that followed. I felt nostalgic!
