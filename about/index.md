@@ -9,6 +9,7 @@ E-mail: rj722 [AT] protonmail [DOT] com
 
 GPG: C984 E9A2 D2E3 E581 4F3E  DB1E DD53 53EC 154B 6811
 
+Mastodon: <a rel="me" href="https://toots.dgplug.org/@rj722">@rj722@toots.dgplug.org</a>
 Twitter: <a href="https://twitter.com/rahul722j"> @rahul722j </a>
 
 IRC: RJ722 on irc.freenode.net
