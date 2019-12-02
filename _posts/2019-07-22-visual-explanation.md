@@ -4,6 +4,8 @@ title: "The [deceptive] power of visual explanation"
 categories: blog
 ---
 
+<!--more-->
+
 Quite recently, I came across Jay Alammar's, rather beautiful blog post, ["A
 Visual Intro to NumPy & Data Representation"][visualnumpy].
 
