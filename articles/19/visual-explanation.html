@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The [deceptive] power of visual explanation</title>
+  <meta name="description" content="">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="https://rj722.github.io/articles/19/visual-explanation">
+
+  <link rel="alternate" type="application/rss+xml" title="Rahul Jha" href="https://rj722.github.io/feed.xml" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881917-2"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'UA-113881917-2');
+  </script>
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/"><img class="badge" src="/assets/img/badge_1.png" alt="CH"></a>
+	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/">RJ722's blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/newsletter/">Newsletter</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/css/print.css"></a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/pubkey"></a>
+		    
+	    
+  	
+		
+  	
+	</nav>
+</header>
+    <article class="group">
+      <h1>The [deceptive] power of visual explanation</h1>
+<p class="subtitle">July 22, 2019</p>
+
+<!--more-->
+
+<p>Quite recently, I came across Jay Alammar’s, rather beautiful blog post, <a href="https://jalammar.github.io/visual-numpy/">“A
+Visual Intro to NumPy &amp; Data Representation”</a>.</p>
+
+<p>Before reading this, whenever I had to think about an array:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">data</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>I used to create a mental picture somewhat like this:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+       ┌────┬────┬────┐
+data = │  1 │  2 │  3 │
+       └────┴────┴────┘
+</code></pre></div></div>
+
+<p>But Jay, on the other hand, uses a vertical stack for representing the same array.</p>
+
+<figure class="fullwidth"><img src="https://jalammar.github.io/images/numpy/numpy-array.png" /><figcaption>Image
+from <a href="https://jalammar.github.io/visual-numpy/"> Jay's blog post. </a>
+</figcaption></figure>
+
+<p>At the first glance, and owing to the beautiful graphics Jay has created, it
+makes perfect sense.</p>
+
+<p>Now, if you had only seen this image, and I ask you the dimensions of <code class="highlighter-rouge">data</code>,
+what would your answer be?</p>
+
+<p>The mathematician inside you barks <code class="highlighter-rouge">(3, 1)</code>.</p>
+
+<p>But, to my surprise, this wasn’t the answer:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,)</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">(3, )</code> eh? wondering, what would a <code class="highlighter-rouge">(3, 1)</code> array look like?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+</code></pre></div></div>
+
+<p>Hmm, This begs the question: what is the difference between an array of shape
+<code class="highlighter-rouge">(R, )</code> and <code class="highlighter-rouge">(R, 1)</code>. A little bit of research landed me at <a href="https://stackoverflow.com/a/22074424/6426752">this answer on
+StackOverflow</a>. Let’s see:</p>
+
+<blockquote>
+  <p>The best way to think about NumPy arrays is that they consist of two parts, a
+<em>data buffer</em> which is just a block of raw elements, and a <em>view</em> which
+describes how to interpret the data buffer.</p>
+</blockquote>
+
+<blockquote>
+  <p>For example, if we create an array of 12 integers:</p>
+
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="n">array</span><span class="p">([</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
+</code></pre></div></div>
+
+<blockquote>
+
+  <p>Then <code class="highlighter-rouge">a</code> consists of a data buffer, arranged something like this:</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+ ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐
+ │  0 │  1 │  2 │  3 │  4 │  5 │  6 │  7 │  8 │  9 │ 10 │ 11 │
+ └────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘
+</code></pre></div></div>
+
+<blockquote>
+  <p>and a view which describes how to interpret the data:</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">flags</span>
+      <span class="n">C_CONTIGUOUS</span> <span class="p">:</span> <span class="bp">True</span>
+      <span class="n">F_CONTIGUOUS</span> <span class="p">:</span> <span class="bp">True</span>
+      <span class="n">OWNDATA</span> <span class="p">:</span> <span class="bp">True</span>
+      <span class="n">WRITEABLE</span> <span class="p">:</span> <span class="bp">True</span>
+      <span class="n">ALIGNED</span> <span class="p">:</span> <span class="bp">True</span>
+      <span class="n">UPDATEIFCOPY</span> <span class="p">:</span> <span class="bp">False</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">dtype</span>
+    <span class="n">dtype</span><span class="p">(</span><span class="s">'int64'</span><span class="p">)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">itemsize</span>
+    <span class="mi">8</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">strides</span>
+    <span class="p">(</span><span class="mi">8</span><span class="p">,)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">shape</span>
+    <span class="p">(</span><span class="mi">12</span><span class="p">,)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Here the <em>shape</em> <code class="highlighter-rouge">(12,)</code> means the array is indexed by a single index which
+runs from 0 to 11. Conceptually, if we label this single index <code class="highlighter-rouge">i</code>, the array
+<code class="highlighter-rouge">a</code> looks like this:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>i= 0    1    2    3    4    5    6    7    8    9   10   11
+  ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐
+  │  0 │  1 │  2 │  3 │  4 │  5 │  6 │  7 │  8 │  9 │ 10 │ 11 │
+  └────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘
+</code></pre></div>  </div>
+
+  <p>If we <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.reshape.html">reshape</a> an array, this doesn’t change the data buffer.
+Instead, it creates a new view that describes a different way to interpret the
+data. So after:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; b = a.reshape((3, 4))
+</code></pre></div>  </div>
+
+  <p>the array <code class="highlighter-rouge">b</code> has the same data buffer as <code class="highlighter-rouge">a</code>, but now it is indexed by <em>two</em>
+indices which run from 0 to 2 and 0 to 3 respectively. If we label the two
+indices <code class="highlighter-rouge">i</code> and <code class="highlighter-rouge">j</code>, the array <code class="highlighter-rouge">b</code> looks like this:</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+i= 0    0    0    0    1    1    1    1    2    2    2    2
+j= 0    1    2    3    0    1    2    3    0    1    2    3
+┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐
+│  0 │  1 │  2 │  3 │  4 │  5 │  6 │  7 │  8 │  9 │ 10 │ 11 │
+└────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘
+</code></pre></div></div>
+
+<p>So, if were to actually have a <code class="highlighter-rouge">(3, 1)</code> matrix, we would have the exact same
+stack representation as a <code class="highlighter-rouge">(3, )</code> matrix, thus creating the confusion.</p>
+
+<p>So, what about the horizontal representation?</p>
+
+<p>An argument can be made that the horizontal representation can be misinterpreted
+as a <code class="highlighter-rouge">(1, 3)</code> matrix, our brains are so accustomed to seeing it as 1-D array,
+that it is almost never the case (at least with folks who have worked with
+Python before).</p>
+
+<p>Of course, it all makes perfect sense now, but it did take me a while to figure
+out what exactly was going under the hood here.</p>
+
+<p><label for="margin-figure-id" class="margin-toggle">⊕</label><input type="checkbox" id="margin-figure-id" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="https://i.stack.imgur.com/4lunM.gif" /><br />Visual
+Explanation of Fourier Series - Decomposition of a square wave into a sum of
+infinite sinusoids. From <a href="https://math.stackexchange.com/a/736986"> this
+answer on math.stackexchange.com</a> </span></p>
+
+<p>I also realized that while it is <a href="https://math.stackexchange.com/questions/733754/visually-stunning-math-concepts-which-are-easy-to-explain"> hugely helpful to visualize </a> something
+when learning about it, but one should always take the visual representation
+with a grain of salt. As <a href="https://math.stackexchange.com/questions/743067/visually-deceptive-proofs-which-are-mathematically-wrong">we can see, they are not entirely accurate</a>.</p>
+
+<p>For now, I’m sticking to my prior way of picturing a 1-D array as a horizontal
+list to avoid the confusion. I shall update the blog if I find anything
+otherwise.</p>
+
+<p>My point is <em>not</em> that Jay’s drawings are flawed, but how susceptible we are to
+visual deceptions. In this case, it was relatively easier to figure out, because
+it was code, which forces one to pay attention to each and every detail, however
+minor it may be.</p>
+
+<p>After all, human brain, prone to so many biases, taking shortcuts for nearly
+every decision we make (thus leaving room for sanity) isn’t anywhere near as
+perfect as it thinks it is.</p>
+
+
+
+
+    </article>
+    <span class="print-footer">The [deceptive] power of visual explanation - July 22, 2019 - Rahul Jha</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="/newsletter"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/rahul722j"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/RJ722"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2020 &nbsp;&nbsp;RAHUL JHA</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for Musings of RJ722 </a> in <a href="//jekyllrb.com">Jekyll</a>.</span>
+</div>
+</footer>
+
+  </body>
+</html>

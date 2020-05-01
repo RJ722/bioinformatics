@@ -1,31 +1,1538 @@
----
-layout: null
-nav_exclude: true
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Rahul Jha</title>
+    <description>A means to being!</description>
+    <link>https://rj722.github.io/</link>
+    <atom:link href="https://rj722.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 01 May 2020 13:26:41 +0530</pubDate>
+    <lastBuildDate>Fri, 01 May 2020 13:26:41 +0530</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>&quot;isn't a title of this post&quot; isn't a title of this post</title>
+        <description>&lt;p&gt;[NOTE: This post originally appeared &lt;a href=&quot;https://deepsource.io/blog/self-referential&quot;&gt;on
+deepsource.io&lt;/a&gt;, and has been
+posted here with due permission.]&lt;/p&gt;
+
+&lt;p&gt;In the early part of the last century, when David Hilbert was working on
+stricter formalization of geometry than Euclid, Georg Cantor had worked out a
+theory of different types of infinities, &lt;i&gt;the theory of sets&lt;/i&gt;. This
+theory would soon unveil a series of confusing paradoxes, leading to &lt;a href=&quot;https://en.wikipedia.org/wiki/Foundations_of_mathematics#Foundational_crisis&quot;&gt;
+a crisis in the Mathematics community &lt;/a&gt; regarding the stability of the
+foundational principles of the math of that time.&lt;/p&gt;
+
+&lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;&gt;&lt;/script&gt;
+
+&lt;script id=&quot;MathJax-script&quot; async=&quot;&quot; src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Central to these paradoxes was the &lt;em&gt;Russell’s paradox&lt;/em&gt; (or more generally, as
+we’d talk about later, the &lt;em&gt;Epimenides Paradox&lt;/em&gt;). Let’s see what it is.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;In those simpler times, you were allowed to define a set if you could describe
+it in English. And, owing to mathematicians’ predilection for self-reference,
+sets could contain other sets.&lt;/p&gt;
+
+&lt;p&gt;Russell then, came up with this:&lt;/p&gt;
+
+&lt;p class=&quot;text-center text-bold&quot;&gt;
+
+\(R\)&amp;nbsp; is a set of all the sets which do not contain themselves.
+
+&lt;/p&gt;
+
+&lt;p&gt;
+
+The question was &quot;Does \(R \) contain itself?&quot; If it doesn’t, then according to
+the second half of the definition it should. But if it does, then it no longer
+meets the definition.
+
+&lt;/p&gt;
+
+&lt;p&gt;The same can symbolically be represented as:&lt;/p&gt;
+
+&lt;p class=&quot;text-center text-bold&quot;&gt;
+
+Let \(R = \{ x \mid x \not \in x \} \), then \(R \in R \iff R \not \in R \)
+
+&lt;/p&gt;
+
+&lt;p&gt;Cue mind exploding.&lt;/p&gt;
+
+&lt;p&gt;“Grelling’s paradox” is a startling variant which uses adjectives instead of
+sets. If adjectives are divided into two classes, autological
+(self-descriptive) and heterological (non-self-descriptive), then, is
+‘heterological’ heterological? Try it!&lt;/p&gt;
+
+&lt;h3 id=&quot;epimenides-paradox&quot;&gt;Epimenides Paradox&lt;/h3&gt;
+
+&lt;p&gt;Or, the so-called &lt;em&gt;Liar Paradox&lt;/em&gt; was another such paradox which shred apart
+whatever concept of ‘computability’ was, at that time - the notion that things
+could either be true or false.&lt;/p&gt;
+
+&lt;p&gt;Epimenides was a Cretan, who made one immortal statement:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“All Cretans are liars.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If all Cretans are liars, and Epimenides was a Cretan, then he was lying when
+he said that “All Cretans are liars”. But wait, if he was lying then, how can
+we ‘prove’ that he wasn’t lying about lying? Ein?&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-mobius&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-mobius&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;https://i.imgur.com/Cdd6LpT.png&quot; /&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;This is what makes it a &lt;em&gt;paradox&lt;/em&gt;: A statement so rudely violating the assumed
+dichotomy of statements into true and false, because if you tentatively think
+it’s true, it backfires on you and make you think that it is false. And a
+similar backfire occurs if you assume that the statement is false. Go ahead,
+try it!&lt;/p&gt;
+
+&lt;p&gt;If you look closely, there is one common culprit in all of these paradoxes,
+namely ‘self-reference’. Let’s look at it more closely.&lt;/p&gt;
+
+&lt;h3 id=&quot;strange-loopiness&quot;&gt;Strange Loopiness&lt;/h3&gt;
+
+&lt;p&gt;If self-reference, or what Douglas Hofstadter - whose prolific work on the
+subject matter has inspired this blog post - calls ‘Strange Loopiness’ was the
+source of all these paradoxes, it made perfect sense to just banish
+self-reference, or anything which allowed it to occur. Russell and Whitehead,
+two rebel mathematicians of the time, who subscribed to this point of view, set
+forward and undertook the mammoth exercise, namely &lt;em&gt;“Principia Mathematica”&lt;/em&gt;,
+which we as we will see in a little while, was utterly demolished by Gödel’s
+findings.&lt;/p&gt;
+
+&lt;p&gt;The main thing which made it difficult to ban self-reference was that it was
+hard to pin point where exactly did the self-reference occur. It may as well be
+spread out over several steps, as in this ‘expanded’ version of Epimenides:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The next statement is a lie.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The previous statement is true.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Russell and Whitehead, in &lt;em&gt;P.M.&lt;/em&gt; then, came up with a multi-hierarchy set
+theory to deal with this. The basic idea was that a set of the lowest ‘type’
+could only contain ‘objects’ as members (not sets). A set of the next type
+could then only either contain objects, or sets of lower types. This,
+implicitly banished self-reference.&lt;/p&gt;
+
+&lt;p&gt;Since, all sets must have a type, a set ‘which contains all sets which are not
+members of themselves’ is not a set at all, and thus you can say that Russell’s
+paradox was dealt with.&lt;/p&gt;
+
+&lt;p&gt;Similarly, if an attempt is made towards applying the expanded Epimenides to
+this theory, it must fail as well, for the first sentence to make a reference
+to the second one, it has to be hierarchically above it - in which case, the
+second one can’t loop back to the first one.&lt;/p&gt;
+
+&lt;p&gt;Thirty one years after David Hilbert set before the academia to rigorously
+demonstrate that the system defined in &lt;em&gt;Principia Mathematica&lt;/em&gt; was both
+&lt;em&gt;consistent&lt;/em&gt; (contradiction-free) and &lt;em&gt;complete&lt;/em&gt; (i.e. every true statement
+could be evaluated to true within the methods provided by &lt;em&gt;P.M.&lt;/em&gt;), Gödel
+published his famous Incompleteness Theorem. By importing the Epimenides
+Paradox right into the heart of &lt;em&gt;P.M.&lt;/em&gt;, he proved that not just the
+axiomatic system developed by Russell and Whitehead, but none of the
+axiomatic systems whatsoever were &lt;em&gt;complete&lt;/em&gt; without being &lt;em&gt;inconsistent&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Clear enough, &lt;em&gt;P.M.&lt;/em&gt; lost it’s charm in the realm of academics.&lt;/p&gt;
+
+&lt;p&gt;Before Gödel’s work too, &lt;em&gt;P.M.&lt;/em&gt; wasn’t particularly loved as well.&lt;/p&gt;
+
+&lt;p&gt;Why?&lt;/p&gt;
+
+&lt;p&gt;It isn’t just limited to this blog post, but we humans, in general, have a diet
+for self-reference - and this quirky theory severely limits our ability to
+abstract away details - something which we love, not only as programmers, but
+as linguists too - so much so, that the preceding paragraph, “It isn’t …
+&lt;em&gt;this&lt;/em&gt; blog … &lt;em&gt;we&lt;/em&gt; humans …” would be doubly forbidden because the ‘right’
+to mention ‘&lt;em&gt;this blog post’&lt;/em&gt; is limited only to something which is
+hierarchically above blog posts, ‘&lt;em&gt;metablog-posts&lt;/em&gt;’. Secondly, me (presumably a
+human) belonging to the class &lt;em&gt;‘we’&lt;/em&gt; can’t mention ‘&lt;em&gt;we&lt;/em&gt;’ either.&lt;/p&gt;
+
+&lt;p&gt;Since, we humans, love self-reference so much, let’s discuss some ways in which
+it can be expressed in written form.&lt;/p&gt;
+
+&lt;p&gt;One way of making such a strange loop, and perhaps the ‘simplest’ is using the
+word ‘this’. Here:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This sentence is made up of eight words.&lt;/li&gt;
+  &lt;li&gt;This sentence refers to itself, and is therefore useless.&lt;/li&gt;
+  &lt;li&gt;This blog post is so good.&lt;/li&gt;
+  &lt;li&gt;This sentence conveys you the meaning of ‘this’.&lt;/li&gt;
+  &lt;li&gt;This sentence is a lie. (Epimenides Paradox)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Another amusing trick for creating a self-reference without using the word
+‘this sentence’ is to quote the sentence inside itself.&lt;/p&gt;
+
+&lt;p&gt;Someone may come up with:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The sentence ‘The sentence contains five words’ contains five words.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;But, such an attempt must fail, for to quote a finite sentence inside itself
+would mean that the sentence is smaller than itself. However, infinite
+sentences can be self-referenced this way.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The sentence
+    &quot;The sentence
+        &quot;The sentence
+                                ...etc
+                                ...etc
+        is infinitely long&quot;
+    is infinitely long&quot;
+is infinitely long&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There’s a third method as well, which you already saw in the title - the Quine
+method. The term ‘Quine’ was coined by Douglas Hofstadter in his book “Gödel
+Escher, Bach” (which heavily inspires this blog post). When using this, the
+self-reference is ‘generated’ by describing a typographical entity, isomorphic
+to the quine sentence itself. This description is carried in two parts - one is
+a set of &lt;em&gt;‘instructions’&lt;/em&gt; about how to ‘build’ the sentence, and the other, the
+&lt;em&gt;‘template’&lt;/em&gt; contains information about the construction materials required.&lt;/p&gt;
+
+&lt;p&gt;The Quine version of Epimenides would be:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“yields falsehood when preceded by it’s quotation” yields falsehood when preceded by it’s quotation&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Before going on with ‘quining’, let’s take a moment and realize how awfully
+powerful our cognitive capacities are, and what goes in our head when a
+cognitive payload full of self-references is delivered - in order to decipher
+it, we not only need to know the language, but also need to work out the
+referent of the phrase analogous to ‘this sentence’ in that language. This
+parsing depends on our complex, yet totally assimilated ability to handle the
+language.&lt;/p&gt;
+
+&lt;p&gt;The idea of referring to itself is quite mind-blowing, and we keep doing it all
+the time — perhaps, why it feels so ‘easy’ for us to do so. But, we aren’t born
+that way, we grow that way. This could better be realized by telling someone
+much younger “This sentence is wrong.”. They’d probably be confused - What
+sentence is wrong?. The reason why it’s so simple for self-reference to occur,
+and hence allow paradoxes, in our language, is well, our language. It allows
+our brain to do the heavy lifting of what the author is trying to get through
+us, without being verbose.&lt;/p&gt;
+
+&lt;p&gt;Back to Quines.&lt;/p&gt;
+
+&lt;h2 id=&quot;reproducing-itself&quot;&gt;Reproducing itself&lt;/h2&gt;
+
+&lt;p&gt;Now, that we are aware of how ‘quines’ can manifest as self-reference, it would
+be interesting to see how the same technique can be used by a computer program
+to ‘reproduce’ itself.&lt;/p&gt;
+
+&lt;p&gt;To make it further interesting, we shall choose the language most apt for the
+purpose - brainfuck:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&amp;gt;++++++++[-&amp;gt;++++++++&amp;lt;]&amp;gt;--....[-]&amp;lt;&amp;lt;[&amp;lt;]&amp;lt;&amp;lt;++++++++[-&amp;gt;+++++&amp;gt;++++++++&amp;lt;&amp;lt;]&amp;gt;+++&amp;gt;--&amp;gt;[[-&amp;lt;&amp;lt;&amp;lt;+&amp;gt;.&amp;gt;&amp;gt;]&amp;lt;.[-&amp;gt;+&amp;lt;]&amp;lt;[-&amp;gt;+&amp;lt;]&amp;gt;&amp;gt;&amp;gt;]&amp;lt;&amp;lt;&amp;lt;&amp;lt;[&amp;lt;]&amp;gt;[.&amp;gt;]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- Here's an EasterEgg: https://www.youtube.com/watch?v=F5P6Q7vs_-Y --&gt;
+
+&lt;p&gt;Running that program above produces itself as the output. I agree, it isn’t the
+most descriptive program in the world, so written in Python below, is the
+nearest we can go to describe what’s happening inside those horrible chains of
++’s and &amp;gt;’s:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;THREE_QUOTES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&quot;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;eniuq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'{template}({THREE_QUOTES}{template}{THREE_QUOTES})'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;eniuq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;THREE_QUOTES = '&quot;' * 3
+
+def eniuq(template): print(
+  f'{template}({THREE_QUOTES}{template}{THREE_QUOTES})')
+
+eniuq&quot;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The first line generates &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;&quot;&quot;&lt;/code&gt; on the fly, which marks multiline strings in
+Python.&lt;/p&gt;
+
+&lt;p&gt;Next two lines define the &lt;code class=&quot;highlighter-rouge&quot;&gt;eniuq&lt;/code&gt; function, which prints the argument template
+twice - once, plain and then surrounded with triple quotes.&lt;/p&gt;
+
+&lt;p&gt;The last 4 lines cleverly call this function so that the output of the program
+is the source code itself.&lt;/p&gt;
+
+&lt;p&gt;Since we are printing in an order opposite of quining, the name of the function
+is ‘quine’ reversed -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;eniuq&lt;/code&gt; (name stolen from Hofstadter again)&lt;/p&gt;
+
+&lt;p&gt;Remember the discussion about how self-reference capitalizes on the processor?
+What if ‘quining’ was a built-in feature of the language, providing what we in
+programmer lingo call ‘syntactic sugar’?&lt;/p&gt;
+
+&lt;p&gt;Let’s assume that an asterisk, &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; in the brainfuck interpreter would copy the
+instructions before executing them, what would then be the output of the
+following program?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It’d be an asterisk again. You could make an argument that this is silly, and
+should be counted as ‘cheating’. But, it’s the same as relying on the
+processor, like using “this sentence” to refer to this sentence - you rely on
+your brain to do the inference for you.&lt;/p&gt;
+
+&lt;p&gt;What if &lt;code class=&quot;highlighter-rouge&quot;&gt;eniuq&lt;/code&gt; was a builtin keyword in Python? A perfect self-rep was then
+just be a call away:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;eniuq('eniuq')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What if &lt;code class=&quot;highlighter-rouge&quot;&gt;quine&lt;/code&gt; was a verb in the English language? We could reduce a lot of
+explicit cognitive processes required for inference. The Epimenides paradox
+would then be:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“yields falsehood if quined” yields falsehood if quined&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now, that we are talking about self-rep, here’s one last piece of entertainment
+for you.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-tuppers-self-referential-formula&quot;&gt;The Tupper’s self-referential formula&lt;/h2&gt;
+
+&lt;p&gt;This formula is defined through an inequality:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+
+\({1 \over 2} &amp;lt; \left\lfloor \mathrm{mod}\left(\left\lfloor {y \over 17} \right\rfloor 2^{-17 \lfloor x \rfloor - \mathrm{mod}(\lfloor y\rfloor, 17)},2\right)\right\rfloor\)
+
+&lt;/p&gt;
+
+&lt;p&gt;
+
+If you take that absurd thing above, and move around in the cartesian plane for
+the coordinates \(0 \le x \le 106, k \le y \le k + 17\), where \(k\) is a &lt;a href=&quot;https://gist.githubusercontent.com/RJ722/cad7deff9a11ed927e0979091d45b479/raw/dd3b18d6e6b693685724a148f6ce937e6347f587/544-1.txt&quot;&gt;
+544 digit integer &lt;/a&gt; (just hold on with me here), color every pixel black for
+True, and white otherwise, you'd get:
+
+&lt;/p&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;https://i.imgur.com/aGouM3u.png&quot; /&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;
+
+This doesn't end here. If \(k\) is now replaced with &lt;a href=&quot;https://gist.githubusercontent.com/RJ722/cad7deff9a11ed927e0979091d45b479/raw/4ab074d235de9e58f10b2d94fe4e9970cb03a6c7/291.txt&quot;&gt;
+another integer containing 291 digits&lt;/a&gt;, we get yours truly:
+
+&lt;/p&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;https://i.imgur.com/NvPlE33.png&quot; /&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+        <pubDate>Mon, 20 Jan 2020 00:00:00 +0530</pubDate>
+        <link>https://rj722.github.io/articles/20/self-referential-blog-post</link>
+        <guid isPermaLink="true">https://rj722.github.io/articles/20/self-referential-blog-post</guid>
+        
+        
+        <category>blog</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>A panegyric about my mentor, Omar Bhai</title>
+        <description>&lt;p&gt;I was still up at this unearthly hour, thinking about life for a while now - fumbled thoughts about where I had come, where I started, and quite expectedly, Omar Bhai, your name popped in.&lt;/p&gt;
+
+&lt;p&gt;The stream continued. I started thinking about everything I’ve learned from you and was surprised with merely the sheer volume of thoughts that followed. I felt nostalgic!&lt;/p&gt;
+
+&lt;p&gt;I made a mental note to type this out the next day.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I wanted to do this when we said our final goodbyes and you left for the States, but thank God, I didn’t - I knew that I would miss you, but never could I have guessed that it would be so overwhelming - I would’ve never written it as passionately as I do today.&lt;/p&gt;
+
+&lt;p&gt;For those of you who don’t already know him, here’s a picture:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/f5GRyet.png&quot; alt=&quot;Omar Khursheed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m a little emotional right now, so please bear with me.&lt;/p&gt;
+
+&lt;p&gt;You have been warned - the words “thank you” and “thanks” appear irritatingly often below. I tried changing, but none other has quite the same essence.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-do-i-begin-thanking-you&quot;&gt;How do I begin thanking you?&lt;/h2&gt;
+
+&lt;p&gt;Well, let’s start with this - thank you for kicking me on my behind, albeit civilly, whenever I would speak nuisance (read chauvinism). I can’t thank you enough for that!&lt;/p&gt;
+
+&lt;p&gt;I still can’t quite get how you tolerated the bigot I was and managed to be calm and polite. Thank You for teaching me what tolerance is!&lt;/p&gt;
+
+&lt;p&gt;Another thing which I learnt from you was what it meant to be privileged. I can no longer see things the way I used to, and this has made a huge difference. Thank You!&lt;/p&gt;
+
+&lt;p&gt;I saw you through your bad times and your good. The way you tackled problems, and how easy you made it look. Well, it taught me [&lt;em&gt;drum roll&lt;/em&gt;] how to think (before acting and not the other way round). Thank You for that too!&lt;/p&gt;
+
+&lt;p&gt;And, thank you for buying me books, and even more so, lending away so many of them! and even more so, educating me about why to read books and how to read them. I love your collection.&lt;/p&gt;
+
+&lt;p&gt;You showed all of us, young folks, how powerful effective communication is. Thank You again for that! I know, you never agree on this, but you are one hell of a speaker. I’ve always been a fan of you and your puns.&lt;/p&gt;
+
+&lt;p&gt;I wasn’t preparing for the GRE, but I sat in your sessions anyways, just to see you speak. The way you connect with the audience is just brilliant.&lt;/p&gt;
+
+&lt;p&gt;For all the advice you gave me on my relationships with people - telling me to back off when I was being toxic and dragging me off when I was on the receiving side - I owe you big time. Thank You!&lt;/p&gt;
+
+&lt;p&gt;Also, a hearty thank you for making me taste the best thing ever - yes, fried cheese it is. :D&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/uwuWXic.jpg&quot; alt=&quot;Fried Cheese&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thank You for putting your trust and confidence in me!&lt;/p&gt;
+
+&lt;p&gt;Thank you for all of this, and much more!&lt;/p&gt;
+
+&lt;p&gt;Yours Truly,
+Rahul&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 Sep 2019 00:00:00 +0530</pubDate>
+        <link>https://rj722.github.io/articles/19/panegyric-omar-bhai</link>
+        <guid isPermaLink="true">https://rj722.github.io/articles/19/panegyric-omar-bhai</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>The [deceptive] power of visual explanation</title>
+        <description>&lt;!--more--&gt;
+
+&lt;p&gt;Quite recently, I came across Jay Alammar’s, rather beautiful blog post, &lt;a href=&quot;https://jalammar.github.io/visual-numpy/&quot;&gt;“A
+Visual Intro to NumPy &amp;amp; Data Representation”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Before reading this, whenever I had to think about an array:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I used to create a mental picture somewhat like this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+       ┌────┬────┬────┐
+data = │  1 │  2 │  3 │
+       └────┴────┴────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But Jay, on the other hand, uses a vertical stack for representing the same array.&lt;/p&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;https://jalammar.github.io/images/numpy/numpy-array.png&quot; /&gt;&lt;figcaption&gt;Image
+from &lt;a href=&quot;https://jalammar.github.io/visual-numpy/&quot;&gt; Jay's blog post. &lt;/a&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;At the first glance, and owing to the beautiful graphics Jay has created, it
+makes perfect sense.&lt;/p&gt;
+
+&lt;p&gt;Now, if you had only seen this image, and I ask you the dimensions of &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt;,
+what would your answer be?&lt;/p&gt;
+
+&lt;p&gt;The mathematician inside you barks &lt;code class=&quot;highlighter-rouge&quot;&gt;(3, 1)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;But, to my surprise, this wasn’t the answer:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;(3, )&lt;/code&gt; eh? wondering, what would a &lt;code class=&quot;highlighter-rouge&quot;&gt;(3, 1)&lt;/code&gt; array look like?&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;n&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Hmm, This begs the question: what is the difference between an array of shape
+&lt;code class=&quot;highlighter-rouge&quot;&gt;(R, )&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;(R, 1)&lt;/code&gt;. A little bit of research landed me at &lt;a href=&quot;https://stackoverflow.com/a/22074424/6426752&quot;&gt;this answer on
+StackOverflow&lt;/a&gt;. Let’s see:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The best way to think about NumPy arrays is that they consist of two parts, a
+&lt;em&gt;data buffer&lt;/em&gt; which is just a block of raw elements, and a &lt;em&gt;view&lt;/em&gt; which
+describes how to interpret the data buffer.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For example, if we create an array of 12 integers:&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;Then &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; consists of a data buffer, arranged something like this:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+ ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐
+ │  0 │  1 │  2 │  3 │  4 │  5 │  6 │  7 │  8 │  9 │ 10 │ 11 │
+ └────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;and a view which describes how to interpret the data:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flags&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;C_CONTIGUOUS&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;F_CONTIGUOUS&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;OWNDATA&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;WRITEABLE&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;ALIGNED&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;UPDATEIFCOPY&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'int64'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemsize&lt;/span&gt;
+    &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strides&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Here the &lt;em&gt;shape&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;(12,)&lt;/code&gt; means the array is indexed by a single index which
+runs from 0 to 11. Conceptually, if we label this single index &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;, the array
+&lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; looks like this:&lt;/p&gt;
+
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;i= 0    1    2    3    4    5    6    7    8    9   10   11
+  ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐
+  │  0 │  1 │  2 │  3 │  4 │  5 │  6 │  7 │  8 │  9 │ 10 │ 11 │
+  └────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+
+  &lt;p&gt;If we &lt;a href=&quot;http://docs.scipy.org/doc/numpy/reference/generated/numpy.reshape.html&quot;&gt;reshape&lt;/a&gt; an array, this doesn’t change the data buffer.
+Instead, it creates a new view that describes a different way to interpret the
+data. So after:&lt;/p&gt;
+
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; b = a.reshape((3, 4))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+
+  &lt;p&gt;the array &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; has the same data buffer as &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;, but now it is indexed by &lt;em&gt;two&lt;/em&gt;
+indices which run from 0 to 2 and 0 to 3 respectively. If we label the two
+indices &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;j&lt;/code&gt;, the array &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; looks like this:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+i= 0    0    0    0    1    1    1    1    2    2    2    2
+j= 0    1    2    3    0    1    2    3    0    1    2    3
+┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐
+│  0 │  1 │  2 │  3 │  4 │  5 │  6 │  7 │  8 │  9 │ 10 │ 11 │
+└────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So, if were to actually have a &lt;code class=&quot;highlighter-rouge&quot;&gt;(3, 1)&lt;/code&gt; matrix, we would have the exact same
+stack representation as a &lt;code class=&quot;highlighter-rouge&quot;&gt;(3, )&lt;/code&gt; matrix, thus creating the confusion.&lt;/p&gt;
+
+&lt;p&gt;So, what about the horizontal representation?&lt;/p&gt;
+
+&lt;p&gt;An argument can be made that the horizontal representation can be misinterpreted
+as a &lt;code class=&quot;highlighter-rouge&quot;&gt;(1, 3)&lt;/code&gt; matrix, our brains are so accustomed to seeing it as 1-D array,
+that it is almost never the case (at least with folks who have worked with
+Python before).&lt;/p&gt;
+
+&lt;p&gt;Of course, it all makes perfect sense now, but it did take me a while to figure
+out what exactly was going under the hood here.&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;margin-figure-id&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;margin-figure-id&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;https://i.stack.imgur.com/4lunM.gif&quot; /&gt;&lt;br /&gt;Visual
+Explanation of Fourier Series - Decomposition of a square wave into a sum of
+infinite sinusoids. From &lt;a href=&quot;https://math.stackexchange.com/a/736986&quot;&gt; this
+answer on math.stackexchange.com&lt;/a&gt; &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;I also realized that while it is &lt;a href=&quot;https://math.stackexchange.com/questions/733754/visually-stunning-math-concepts-which-are-easy-to-explain&quot;&gt; hugely helpful to visualize &lt;/a&gt; something
+when learning about it, but one should always take the visual representation
+with a grain of salt. As &lt;a href=&quot;https://math.stackexchange.com/questions/743067/visually-deceptive-proofs-which-are-mathematically-wrong&quot;&gt;we can see, they are not entirely accurate&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For now, I’m sticking to my prior way of picturing a 1-D array as a horizontal
+list to avoid the confusion. I shall update the blog if I find anything
+otherwise.&lt;/p&gt;
+
+&lt;p&gt;My point is &lt;em&gt;not&lt;/em&gt; that Jay’s drawings are flawed, but how susceptible we are to
+visual deceptions. In this case, it was relatively easier to figure out, because
+it was code, which forces one to pay attention to each and every detail, however
+minor it may be.&lt;/p&gt;
+
+&lt;p&gt;After all, human brain, prone to so many biases, taking shortcuts for nearly
+every decision we make (thus leaving room for sanity) isn’t anywhere near as
+perfect as it thinks it is.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 22 Jul 2019 00:00:00 +0530</pubDate>
+        <link>https://rj722.github.io/articles/19/visual-explanation</link>
+        <guid isPermaLink="true">https://rj722.github.io/articles/19/visual-explanation</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>My Experience with OBM</title>
+        <description>&lt;p&gt;If you want an overview about OBM, please &lt;a href=&quot;/articles/19/obm&quot;&gt; read my post on the same &lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’ve participated in three sprints until now, in which I’ve completely failed
+myself, but I’ve already experiencing a drastic changes in my habits, which is
+good.&lt;/p&gt;
+
+&lt;p&gt;Here is what I’ve learned from this short, but significant experience:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;First and foremost, the structure of OBM forces you to formalize things. You
+need to setup goals for yourself. Even better is that the setup makes it very
+difficult to be vague. You’ve to setup smaller tasks you need to achieve in
+order to complete the goal. The research, which is required for listing these
+tasks (thus, providing you with a big picture), getting a correct estimate of
+time required, helps you plan efficiently.&lt;/p&gt;
+
+&lt;p&gt;The next thing is priority - what do you decide to do now. I tend to perform
+better, if I’ve only 3 things on my TODO list, rather than 10. And OBM
+accommodates that - Send a list of all the tasks you want to work for the next
+15 days, and then spend time doing them, rather than managing your list.&lt;/p&gt;
+
+&lt;p&gt;The difficult thing about writing that blog post you’d been thinking about for
+a week, or deciphering the math equation which just popped out of nowhere in
+that paper often isn’t actually writing, or performing an analysis. It’s taking
+out dedicated time from your time-poor schedule just for this. Once you get
+started, it’s way easier.&lt;/p&gt;
+
+&lt;p&gt;A nice analogy to this argument - the hardest part of going to a gym is actually
+physically going to the gym. Once you’re there all geared, and warmed up,
+exercise are much more fun. Getting over this initialization barrier is a must.
+The way I manage this is having slots in my schedule named “OBM”, where I
+&lt;strong&gt;only&lt;/strong&gt; complete the tasks I’ve mentioned for OBM. No, you aren’t allowed to
+browse through twitter during that time - just start grinding, and you shall
+reap the produce afterwards.&lt;/p&gt;
+
+&lt;p&gt;One other important behavior I’ve observed is misalignment between what I
+believe I’m interested in, and how much I can afford to work towards it. If
+repeatedly, I find myself not indulging with the task, I know it’s not made for
+me and quit early (thus saving my time and resources to further go down the
+drain. More about this in &lt;a href=&quot;https://www.goodreads.com/book/show/324748.The_Dip&quot;&gt;“The Dip” by Seth Godin&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;OBM serves as a great tool for introspection, monitoring one’s progress and
+getting things done. As side ‘effects’, it also gives you a taste of
+professionalism, punctuality and reporting relationships - a complete package
+aimed towards self improvement. \o/&lt;/p&gt;
+
+&lt;p&gt;But, if you’re overwhelmed with the notion of public accountability, just yet,
+I’d recommend you to run your own personal OBM and see the difference. If you
+want anymore advice, feel free to contact me (RJ722 on #dgplug, freenode)&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 19 Jul 2019 00:00:00 +0530</pubDate>
+        <link>https://rj722.github.io/articles/19/experience-with-obm</link>
+        <guid isPermaLink="true">https://rj722.github.io/articles/19/experience-with-obm</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Operation Blue Moon</title>
+        <description>&lt;p&gt;It’s been a couple of years since I read &lt;a href=&quot;http://www.shakthimaan.com/what-to-do.html&quot;&gt;“i want 2 do project tell me wat 2 do”&lt;/a&gt;, which then landed me on the home page of &lt;a href=&quot;https://gitlab.com/shakthimaan/operation-blue-moon/&quot;&gt;Operation Blue Moon (OBM)&lt;/a&gt;, a project run single-handedly by the author of the book - &lt;a href=&quot;http://shakthimaan.com/&quot;&gt;Shakthi Kannan (mbuf)&lt;/a&gt;. It is aimed towards time management and getting things done.&lt;/p&gt;
+
+&lt;p&gt;The project not only borrows it’s name, but also the spirit of discipline, from our miliary counterparts. The practices here, built upon Shakthi’s years of experience of dealing with people trying, and failing, and learning from their mistakes, regarding time management.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;!--
+DISCLAIMER: With this blog, I mean to give an overview of what were my takeaways
+with OBM, in no way this serves as a definitive guide about how you should go about
+attempting it. One thing is for sure,
+--&gt;
+
+&lt;p&gt;OBM, at it’s core, provides one with a framework (the ability to define WHY, WHAT,
+WHEN and HOW) to align their thoughts, expectations and action practically,
+along with the ability to monitor your success. How does it do so? Read on.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It’s difficult. It’s this difficulty that creates the scarcity and you, the winner.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Every participant of OBM has a &lt;code class=&quot;highlighter-rouge&quot;&gt;plan&lt;/code&gt; file &lt;label for=&quot;sn-id-plan&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-plan&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;every plan
+is inside a particular track (theme), eg. data scientist, devops, etc. - this
+serves as WHY &lt;/span&gt; (an emacs org file), which enlists their goals - long term,
+short term, secondary, etc. - all goals - The WHAT.&lt;/p&gt;
+
+&lt;p&gt;Then, under each subsequent heading, define what tasks do you need to do in
+order to achieve that goal - The HOW. The tasks have the following propoerties:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*** TODO Write one blog post
+    :PROPERTIES:
+    :ESTIMATED: 3
+    :ACTUAL:
+    :OWNER: RJ722
+    :ID: WRITE.1562247371
+    :TASKID: WRITE.1562247371
+    :END:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ESTIMATED&lt;/code&gt; - The time you estimate you would take for completing the task.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ACTUAL&lt;/code&gt; - The actual amount it takes for you to complete it.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;OWNER&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;ID&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;TASKID&lt;/code&gt; are there for better visualizations. (more on this
+later)&lt;/p&gt;
+
+&lt;p&gt;I’ve the following function (courtesy of &lt;a href=&quot;http://shakthimaan.com/&quot;&gt;mbuf&lt;/a&gt;) in my
+&lt;a href=&quot;http://spacemacs.org/&quot;&gt;spacemacs&lt;/a&gt; config to help me generate these tasks:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  (define-skeleton insert-org-entry
+    &quot;Prompt for task, estimate and category&quot;
+    nil
+    '(setq task  (skeleton-read &quot;Task: &quot;))
+    '(setq estimate  (skeleton-read &quot;Estimate: &quot;))
+    '(setq category (skeleton-read &quot;Category: &quot;))
+    '(setq timestamp (format-time-string &quot;%s&quot;))
+    &quot;*** TODO &quot; task \n
+    &quot;:PROPERTIES:&quot; \n
+    &quot;:ESTIMATED: &quot; estimate \n
+    &quot;:ACTUAL:&quot; \n
+    &quot;:OWNER: RJ722&quot; \n
+    &quot;:ID: &quot; category &quot;.&quot; timestamp \n
+    &quot;:TASKID: &quot; category &quot;.&quot; timestamp \n
+    &quot;:END:&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The more important question is WHEN. Here’s where the ‘sprints’ chime-in. If
+you’re participating in OBM, you’re always sprinting (which makes perfect sense,
+since ideally you wouldn’t want yourself ‘unmanaging’ your time). A sprint,
+generally lasts for around 14-18 days. Before the sprint starts, move the tasks
+you want to get done in that sprint, under it’s ‘tab’ (which exists in the plan
+file, &lt;a href=&quot;https://gitlab.com/shakthimaan/operation-blue-moon/blob/master/plan/data-scientist/RJ722.org&quot;&gt;an example here&lt;/a&gt;). You also need to enter an average amount
+of time you can dedicate on a per day basis for this sprint.&lt;/p&gt;
+
+&lt;p&gt;Shakthi would then move such tasks from all participants to a file dedicated to
+that sprint. The participants can now clock their tasks (track the amount of
+time they have spend doing each of these tasks) - in emacs’ org mode
+(&lt;code class=&quot;highlighter-rouge&quot;&gt;org-clock-in&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;org-clock-out&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;If you have done everything until now correctly, you should have a holistic view
+of how well your performance was for the last sprint. And, &lt;em&gt;this&lt;/em&gt; is the most
+important step. Introspection - See what you did you wrong, what factor did you
+forget to take into account - how much was the difference between the actual and
+expected time of completion. Were you not able to complete all the tasks - why?
+what could you do to improve your estimates?&lt;/p&gt;
+
+&lt;p&gt;You don’t even have to do this formally (although, it helps). Just doing the
+work, clocking it, and sending it over is enough to spark an introspective
+impulse. Just stick with the plan long enough and you’d see improvements. You’d
+see major improvements. I want to attribute the reason for OBM’s success to
+it’s simplicity, but it really is the discipline, showing up everyday and doing
+the work.&lt;/p&gt;
+
+&lt;p&gt;If you currently find yourself in a position, where it feels like you’re stuck -
+you know what you want to do, but there’s this ‘something’ stopping you, and it
+feels forever since you’ve been wanting to do this thing, but there’s been no
+tangible progress so far. Well, then OBM is exactly the right thing for you.
+With this framework, you’re forced to formalize things, diagnose the ‘something’
+stopping you, make changes to your current schedule and to see the different
+between the direction you aim to go towards and the one where you’re heading
+(with your current planning).&lt;/p&gt;
+
+&lt;p&gt;Lastly, I want to thank &lt;a href=&quot;http://shakthimaan.com/&quot;&gt;Shakthi&lt;/a&gt; for all the energy and
+motivation he’s been pumping into the project himself. Thank you so much
+Shakthi!&lt;/p&gt;
+
+&lt;p&gt;Have fun experiencing OBM!&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 12 Jul 2019 00:00:00 +0530</pubDate>
+        <link>https://rj722.github.io/articles/19/obm</link>
+        <guid isPermaLink="true">https://rj722.github.io/articles/19/obm</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Using Weechat with Glowing Bear for IRC</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;Last&lt;/span&gt;  month, I had a new addition to my toolbox - &lt;a href=&quot;https://www.glowing-bear.org/#!/&quot;&gt;Glowing
+Bear&lt;/a&gt;, which has been a really nice improvement, allowing me to access
+Weechat (hosted on a server) through my browser. Here’s how I set it up.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;But, before we begin - the curious folks might ask, &lt;i&gt;“What had you been using
+all this time?”&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;Previously, I could directly ssh &lt;label for=&quot;ssh-id&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ssh-id&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;using mosh - mobile
+shell, which supports intermittent connectivity, which is to say that it allows
+me to retain the session if the network breaks in between. &lt;/span&gt; into my server,
+and attach to a &lt;a href=&quot;https://www.gnu.org/software/screen/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;screen&lt;/code&gt;&lt;/a&gt; session which ran weechat, using the command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mosh USERNAME@SERVER_IP -- screen -D -RR weechat
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;i&gt; “This is pretty neat, why would you want to change it? &lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;“Latency”  -  It was not pleasant, so much so, that I started running two
+instances of weechat - one locally for chatting, and the one on the
+server for listening to messages when AFK &lt;label for=&quot;&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;strong&gt;A&lt;/strong&gt;way &lt;strong&gt;F&lt;/strong&gt;rom
+&lt;strong&gt;K&lt;/strong&gt;eyboard &lt;/span&gt;. It was getting pretty unmanageable, so I decided to look for
+alternatives. Luckily, one of my friends, &lt;a href=&quot;https://blog.lazkani.io/about_me/&quot;&gt;Armageddon&lt;/a&gt;, pointed me
+towards &lt;a href=&quot;https://www.glowing-bear.org/#!/&quot;&gt; Glowing Bear &lt;/a&gt; - which provides a nice web frontend to weechat.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-glowing-bear&quot;&gt;Setting Up Glowing Bear&lt;/h2&gt;
+
+&lt;p&gt;Glowing Bear has pretty decent documentation available at
+&lt;a href=&quot;https://www.glowing-bear.org/#!/&quot;&gt;https://www.glowing-bear.org/#!/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The basic architecture is somewhat similar to the &lt;a href=&quot;https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern&quot;&gt; pub-sub architecure
+&lt;/a&gt; - weechat ‘relays’ (publishes) all messages at a particular port on
+a machine where glowing bear can then ‘listen’ for the messages (subscribe).&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt; “Can’t other people listen to my messages?” &lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;If you’re running glowing bear with a local instance of weechat, you shouldn’t
+worry too much. However, if connecting to a remote instance, you must encrypt
+all communications between your browser and WeeChat.&lt;/p&gt;
+
+&lt;p&gt;Since &lt;a href=&quot;https://www.glowing-bear.org/#!/&quot;&gt;Glowing Bear&lt;/a&gt; uses TLS for encryption, it means that we need to put
+up a signed certificate. They recommend using &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt; for
+getting a certificate, which is really easy. Just install &lt;a href=&quot;https://certbot.eff.org/&quot;&gt;certbot&lt;/a&gt; and
+run:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;certbot certonly --standalone -d DOMAIN_NAME
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once the certificates are generated, the only thing was to make them
+visible to weechat:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; ~username/.weechat/ssl
+&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /etc/letsencrypt/live/DOMAIN_NAME/&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;fullchain,privkey&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;.pem &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ~username/.weechat/ssl/relay.pem
+&lt;span class=&quot;nb&quot;&gt;chown&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; username:username ~username/.weechat/ssl/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, the only issue with me was that I did not have superuser access to the box
+I was running weechat into, and therefore could not access cert files. But,
+After talking to my wonderful host at &lt;a href=&quot;https://wwww.insomnia247.nl&quot;&gt;insomnia247.nl&lt;/a&gt;:
+&lt;a href=&quot;https://git.insomnia247.nl/coolfire&quot;&gt;coolFire&lt;/a&gt;, I came to know that certificates I’m using for my Apache VHost
+should be enough to encrypt my communication (through port 443) and I need not
+start an encrypted relay from weechat. coolFire was also gracious enough to
+throw in some voodoo &lt;label for=&quot;voodoo-id&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;voodoo-id&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;of course, by which I mean that I didn’t
+understand it &lt;/span&gt; and give me a custom URL for running my weechat instance.&lt;/p&gt;
+
+&lt;p&gt;Now, let’s start a WeeChat relay:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+/set relay.network.password y0ur_StRonG-pa$sw0rd:of*choice
+/relay add weechat 9001 # Note that this is NOT encrypted.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For connecting to Glowing Bear, I use port 443 - which allows me to encrypt my
+connection. Note that this isn’t entirely safe, because the fellow users on my
+host can still monitor port 9001, which is unecrypted and only protected by a
+password. But, I can manage this level of risk! :-)&lt;/p&gt;
+
+&lt;h2 id=&quot;icing-over-cake&quot;&gt;Icing over cake&lt;/h2&gt;
+
+&lt;p&gt;I run glowing bear on qutebrowser, through which I can access the whole interface
+without ever having to leave the comfort of my keyboard. \o/&lt;/p&gt;
+
+&lt;h2 id=&quot;further-todos&quot;&gt;Further TODO’s&lt;/h2&gt;
+
+&lt;p&gt;Glowing Bear’s notification system is a little weird - it just stops notifying
+me out of the blue. Remember my friend, &lt;a href=&quot;https://blog.lazkani.io/about_me/&quot;&gt;Armagaeddon&lt;/a&gt; - he actually
+has a weechat plugin for channeling remote notifications to local systems, but
+it turned out that the script will take some additional work to work with macOS.&lt;/p&gt;
+
+&lt;p&gt;Another thing that I want to do is employ a chat logger - I’ve had some pretty
+interesting conversation with people, and they just wash away as soon as I
+restart weechat. This should be pretty easy to do, but I’ve had too much on my
+plate to care right now.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 02 Jul 2019 00:00:00 +0530</pubDate>
+        <link>https://rj722.github.io/articles/19/using-weechat-with-glowing-bear</link>
+        <guid isPermaLink="true">https://rj722.github.io/articles/19/using-weechat-with-glowing-bear</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Silk Road, Revolutions and Systems</title>
+        <description>&lt;p&gt;Today, I read the &lt;a href=&quot;https://www.wired.com/2015/04/silk-road-1/&quot;&gt;story of Silk Road&lt;/a&gt;: how the young idealist Ross
+Ulbricht, tired of chasing success the old school way, found his way around the
+darkweb to create an online
+&lt;label for=&quot;sn-id-darknet&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-darknet&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;As a part of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Darknet&quot;&gt;darkweb&lt;/a&gt;, it was
+operated as a &lt;em&gt;Tor&lt;/em&gt; hidden service which protected the personal privacy of users
+by concealing their details from anyone - from the Government to their ISP -
+conducting network surveillance. Additionally, all payments were made using &lt;a href=&quot;https://en.wikipedia.org/wiki/Bitcoin&quot;&gt;
+Bitcoin &lt;/a&gt;, a cryptocurrency which provides a certain degree of
+anonymity. &lt;/span&gt;
+bazaar for the trading of illicit materials, mainly drugs, which he named Silk
+Road.&lt;/p&gt;
+
+&lt;p&gt;The aim behind writing this blog post is to think out loud and try to gain
+insight into the oversights made by some of the most prominent revolutionaries
+in history.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;When operating his online empire, Ross would take on the identity of Dread
+Pirate Roberts (~DPR) (borrowing the name from &lt;em&gt;“The Princess Bride”&lt;/em&gt;, in which
+the pirate was a mythical character, inhabited by the wearer of the mask).&lt;/p&gt;
+
+&lt;p&gt;Ross (aka DPR) was having trouble switching back-and-forth between these
+different personalities, the many different facets of which were penned down
+beautifully &lt;a href=&quot;https://www.wired.com/2015/04/silk-road-1/&quot;&gt;in the original article &lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;To Alex, Ross was the cool new roommate; to Julia [his on-and-off girlfriend],
+a passionate lover and inspiration; to his family, the perpetual Eagle Scout;
+to Force [undercover DEA Agent posing as a Puerto Rican cartel middlemen], an
+unlikely friend in the night; to Tarbell [FBI Agent investigating his case], a
+smart kid defeated by his own arrogance. To the Southern District of New York
+US attorney’s office, Ross was simply the criminal conspirator Dread Pirate
+Roberts.&lt;/p&gt;
+
+  &lt;p&gt;The likeliest reality is that Ross was all of those things. The open-minded
+seeker who conscientiously tried to pluck trash from a tree was Ross. As was
+the feverish visionary creating a virtual empire at any cost. Neither truth
+invalidated the other. Ross and DPR can (and did) coexist.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ross didn’t exactly dream of building this huge empire of illicit business, but
+it was essentially all baby steps,
+&lt;label for=&quot;sn-id-baby&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-baby&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;As B.J. Neblett said “We are the sum total of our
+experiences. Those experiences – be they positive or negative – make us the
+person we are, at any given point in our lives. And, like a flowing river, those
+same experiences, and those yet to come, continue to influence and reshape the
+person we are, and the person we become. None of us are the same as we were
+yesterday, nor will be tomorrow.” &lt;/span&gt;
+stemming from the influence Ludwig von Mises - an Austrian economist described
+in the &lt;a href=&quot;https://www.wired.com/2015/04/silk-road-1/&quot;&gt;story&lt;/a&gt; as “a totem of the modern American libertarian
+orthodoxy” - had on Ross. According to von Mises, a citizen must have economic
+freedom to be politically and morally free.&lt;/p&gt;
+
+&lt;p&gt;If you haven’t read the &lt;a href=&quot;https://www.wired.com/2015/04/silk-road-1/&quot;&gt;story&lt;/a&gt; yet, please do and then come back! It
+might easily be one of the most riveting cyber-criminology reports you ever
+read.&lt;/p&gt;
+
+&lt;p&gt;Joseph Stalin, Adolf Hitler and Ludwig von Mises, they all had an ideology - a
+vision of the ideal world, and a way of bringing peace to world. For them, it
+embodied an expression which society must adhere to lead them towards utter
+completeness and happiness.&lt;/p&gt;
+
+&lt;p&gt;The ideology of Hitler was an ideology of conquest: the “manifest destiny” of
+a superior race to conquer, occupy, and control lands of the “lesser” people -
+the &lt;em&gt;Untermenschen&lt;/em&gt; - for the sole benefit of the superior race.&lt;/p&gt;
+
+&lt;p&gt;The ideal society for Stalin was one in which people contribute to it because
+they feel it is their pleasure and responsibility to do so, and in which people
+only consume what they need while being mindful of the needs of others.&lt;/p&gt;
+
+&lt;p&gt;And they executed their ideas, bringing about their ‘revolution’!&lt;/p&gt;
+
+&lt;p&gt;Both regimes - the Third Reich and Stalinism - were responsible for millions of
+deaths and untold amounts of suffering.&lt;/p&gt;
+
+&lt;p&gt;Although one can argue that Ross Ulbricht’s ‘revolution’ was nowhere near that
+scale, but that is immaterial to our discussion. It followed the same pattern
+which was summed up by Bearman rather well in the original story:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It’s an age-old story, the bloom and wilt of revolution. After tearing down
+the establishment’s walls, the new regime soon realizes the rubble would make
+a fine set of gallows. Just as Tarbell thought, all systems are the same. At
+the beginning of Silk Road, what Ross created was just a system. Then, at a
+certain point, it became his system—at which moment the system was doomed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Isn’t it strange - How we become the very thing we fight against!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-abyss&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-abyss&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/abyss.jpg&quot; /&gt;&lt;br /&gt;Gazing into Abyss&lt;/span&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Beware that, when fighting monsters, you yourself do not become a monster…
+for when you gaze long into the abyss. The abyss gazes also into you.”&lt;/p&gt;
+
+  &lt;p&gt;― Friedrich W. Nietzsche&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For people who prefer examples in fiction over history, what happened with the
+&lt;a href=&quot;https://gameofthrones.fandom.com/wiki/Season_8&quot;&gt;finale of Game of Thrones&lt;/a&gt; is a prime example of this pattern.
+[Spoilers Ahead] In light of everything Daenerys [one of show’s main
+protagonists] accomplished — birthing dragons out of stone, freeing thousands of
+slaves, helping the Starks defeat an army of ice-zombies — the viewers first
+handedly experienced the mindset of a revolutionary who believed that it was
+incumbent upon her to liberate the entire world. Yet it was when she failed to
+draw a line between herself and her vision
+&lt;label for=&quot;sn-id-dany&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-dany&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;The time when she succumbed to her temptations,
+burning alive and hence killing thousands of people in King’s Landing &lt;/span&gt;
+that she failed as a ruler, becoming exactly what she had hoped to abolish:
+tyranny. It is worth noting here that all the while she unapologetically burnt
+the innocent, she was fueled by the exact same idea - to liberate the innocents
+of the world from tyranny.&lt;/p&gt;
+
+&lt;p&gt;In Ross’s case, the fact that he was feeling uneasy even as DPR (who was a
+rather confident and eloquent character); that he had already begun failing at
+what he had intended to do was the first clue that the shadows of doom had
+already fallen upon him. But he deceived himself in the name of his idea - in
+the belief that he was doing the &lt;em&gt;right thing&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Is it really this belief and total devotion to our idea that blinds us, or is it
+the power and the riches which corrupts us? Or maybe it is a fundamental
+misunderstanding of our very own conceived idea? Perhaps it might be a skewed
+combination of all of the above.&lt;/p&gt;
+
+&lt;p&gt;I do not claim to know the answers to any of the above questions.&lt;/p&gt;
+
+&lt;p&gt;But let’s look at another revolutionary: Mahatma Gandhi and the revolution
+he brought about in India.&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-gandhi&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-gandhi&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/gandhi.jpg&quot; /&gt;&lt;br /&gt;Mahatma Gandhi was
+called Bapu (Father) by many, including Jawaharlal Nehru&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;In response to the &lt;a href=&quot;https://en.wikipedia.org/wiki/Rowlatt_Act&quot;&gt;Rowlatt Act&lt;/a&gt; imposed by the British and the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Jallianwala_Bagh_massacre&quot;&gt;Jallianwala Bagh Massacre&lt;/a&gt;, Gandhi lead the non-cooperation
+movement, appealing to the masses to adopt swadeshi goods and local handicrafts
+to boycott British goods. The movement was based on the principle of &lt;em&gt;Ahimsa&lt;/em&gt;
+(Non-Violence), and after two years of hard work, it gained full momentum
+in 1922. It seemed that the dream of &lt;em&gt;Swaraj&lt;/em&gt; (self-governance) was finally
+turning to reality.&lt;/p&gt;
+
+&lt;p&gt;But giving a face to Gandhi’s fears, cases of violence were reported from
+all over the nation, and after the &lt;a href=&quot;https://en.wikipedia.org/wiki/Chauri_Chaura_incident&quot;&gt;Chauri-Chaura&lt;/a&gt;
+&lt;label for=&quot;sn-id-chauri&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-chauri&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;A large group of protesters participating in the
+Non-cooperation movement clashed with the police, who opened fire. In
+retaliation, the demonstrators attacked and set fire to a police station,
+killing all of its occupants. &lt;/span&gt;
+incident, he decided to call off the protest indefinitely. This was indeed a
+very difficult and brave decision on his part - he could have gotten what he
+wanted and ignored the ‘milder’ cases of violence for the nation, but his moral
+caliber was defiant of such behavior and he chose to voice it.&lt;/p&gt;
+
+&lt;p&gt;It was perhaps because he believed in a perpetual fight - a fight we
+all have to fight against our own moral demons - in which the nation must not
+succumb to the demon of violence.&lt;/p&gt;
+
+&lt;p&gt;Subsequently, Gandhi launched many campaigns perfecting the concept of
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Satyagraha&quot;&gt;&lt;em&gt;Satyagrah&lt;/em&gt;&lt;/a&gt; &lt;label for=&quot;sn-id-satyagrah&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-satyagrah&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;सत्याग्रह (Satyagrah):
+सत्य (Truth) + आग्रह (insistence) - सत्य के लिए आग्रह - &lt;em&gt;The truth force&lt;/em&gt;, is a
+particular form of non-violent civil resistance &lt;/span&gt;, finally leading the nation
+to independence in 1947.&lt;/p&gt;
+
+&lt;p&gt;I guess we all get to play Ross sometimes, and I believe that creating barriers,
+as Gandhi did, to encourage the higher moral stance of one’s own values - be it
+by ruthless questioning of one’s own beliefs and biases, or having an external
+support mechanism for keeping oneself on track - would help us dodge the doom of
+our system.&lt;/p&gt;
+
+&lt;p&gt;But I do find it very interesting to ponder upon how ‘easy’ it is to be lost, to
+be engrossed so deeply into our visions to forget what it stood for in the first
+place; to cross the rather fine line drawn between us and the monster, and how
+tools like identities and the different masks we wear make it all the more
+easier.&lt;/p&gt;
+
+&lt;p&gt;Special thanks to &lt;a href=&quot;https://github.com/chiral-carbon&quot;&gt;Abhipsha&lt;/a&gt; for proofreading and &lt;a href=&quot;https://github.com/RJ722/rj722.github.io/pull/1/files&quot;&gt;making this article
+readable&lt;/a&gt;!&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 26 May 2019 00:00:00 +0530</pubDate>
+        <link>https://rj722.github.io/articles/19/revolution-and-systems</link>
+        <guid isPermaLink="true">https://rj722.github.io/articles/19/revolution-and-systems</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Freedom of Speech, Authoritarianism, Freedom of Press and Faiz</title>
+        <description>&lt;p&gt;Right to Free Speech is essential for a democracy. This blog post aims to shed
+some light on the recent authoritarian attempts made by hindutva-right-wing to
+curb free speech and how can we fight back.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;indias-divider-in-chief&quot;&gt;&lt;em&gt;“India’s Divider in chief”&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;TIME magazine, in it’s May 20 edition, featured the Prime Minister of India, Mr.
+Narendra Damodardas &lt;a href=&quot;https://indianexpress.com/article/india/indias-divider-in-chief-pm-modi-features-on-time-magazine-cover-5720637/&quot;&gt;Modi on it’s cover page&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-modi19&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-modi19&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;https://i.imgur.com/necOF1d.jpg&quot; /&gt;&lt;br /&gt;The photo, which appeared rather grim, was tagged &lt;code class=&quot;highlighter-rouge&quot;&gt;India's Divider in Chief&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The article opens with the sentence:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Of the great democracies to fall to populism, India was the first.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Under Prime Minister Modi, the story read,&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Nation’s most basic norms, such as the character of the Indian state, its
+founding fathers, the place of minorities and its institutions, from
+universities to corporate houses to the media, were shown to be severely
+distrusted.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Furthering the argument, it says:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“…Under Modi, minorities of every stripe – from liberals and lower castes to
+Muslims and Christians – have come under assault”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It talked about the promise of the economic reform of the messiah which has
+failed to materialize and how “he [the BJP] is lucky to be blessed with so weak
+an opposition–a ragtag coalition of parties, led by the Congress, with no agenda
+other than to defeat him&lt;/p&gt;
+
+&lt;p&gt;But, we aren’t here to debate this. Let’s look at the before and aftermath of
+the incident.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2012&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-manmohan&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-manmohan&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;http://img.timeinc.net/time/images/covers/asia/2012/20120716_600.jpg&quot; /&gt;&lt;br /&gt;Manmohan Singh featured on one of the 2012 editions of the same magazine&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;In 2012, Manmohan Singh appeared on the cover of the same magazine as &lt;em&gt;“The
+Underachiever”&lt;/em&gt;, even which might have been an understatement at the time.&lt;/p&gt;
+
+&lt;p&gt;Many of BJP supporters including but not limited to their leader
+&lt;a href=&quot;https://www.thehindu.com/news/national/bjp-attacks-manmohan-after-time-magazine-report/article3616536.ece#!&quot;&gt;Ravi Shankar Prasad, without a shred of doubt on the authenticity of the
+article, straight away demanded his resignation&lt;/a&gt; on the grounds
+that the image of India has been spoiled.&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-modi12&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-modi12&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;https://i.pinimg.com/originals/3d/8f/69/3d8f69a98f3fdeef9359d8a1ef7b49ba.jpg&quot; /&gt;&lt;br /&gt;Narendra Modi appears for the first time on the cover page of TIME, highlighted positively - &lt;code class=&quot;highlighter-rouge&quot;&gt;Modi means business&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;A subsequent edition of TIME in 2012 again showed interest in Indian economy
+featuring Modi on cover page entitled “Modi means business” - enforcing the
+dream BJP instilled in Indians of the economic reform it promised.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2015&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-modi15&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-modi15&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Ftimedotcom.files.wordpress.com%2F2015%2F05%2Findia-final.jpg&amp;amp;w=800&amp;amp;c=sc&amp;amp;poi=face&amp;amp;q=85&quot; /&gt;&lt;br /&gt;Modi, now Prime Minister, appeared once again on the cover page of TIME. This time, it said &lt;code class=&quot;highlighter-rouge&quot;&gt;Why Modi Matters&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;And again in 2015, Modi was featured, this time as the Prime Minister. The tag
+line said “Why Modi Matters” depicting Modi government positively.&lt;/p&gt;
+
+&lt;p&gt;Apart from this, he was also rewarded a place in the list of “The 100 Most
+Influential People” by (yes, you guessed it right) TIME in 2014, 2015 and 2017
+editions.&lt;/p&gt;
+
+&lt;p&gt;Up until now, all in favour, all good - Lo and behold, TIME magazine is the best
+magazine in the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2019&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The trend line of TIME on the opinion on Narendra Modi is very similar to the
+change of opinion of people, slowly declining until 2017 and a much steeper fall
+after that. The cover page of 2019 is a simple depiction of that, but now the
+complaints begin.&lt;/p&gt;
+
+&lt;h3 id=&quot;controversy-behind-pakistani-writer&quot;&gt;Controversy behind Pakistani Writer&lt;/h3&gt;
+
+&lt;p&gt;The author of article, Mr. Aatish Taseer is a Pakistani Journalist. Following the
+release of the magazine, his &lt;a href=&quot;https://en.wikipedia.org/w/index.php?title=Aatish_Taseer&amp;amp;type=revision&amp;amp;diff=896408874&amp;amp;oldid=896403743&quot;&gt;wikipedia page was severly vandalized&lt;/a&gt; - stating
+that he writes against Brahmins, is a member of Lashkar-E-Tayabba, a pakistani
+militant group and that he is also working as a PR manager for Congress.&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;Wikipedia page of Aatish vandalized&lt;/figcaption&gt;&lt;img src=&quot;/assets/img/ateesh-wiki.png&quot; /&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/assets/img/ateesh-wiki2.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;This false information was then tweeted numerous times as widespread propaganda
+by some trolls on the internet. Other means to defame him were also adopted.&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-aatish&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-aatish&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;https://i.imgur.com/9d2Z78v.jpg&quot; /&gt;&lt;br /&gt;One of many fake TIME cover created by trolls for defaming Aatish&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing worth noting here is that yes, the author actually is half-pakistani
+(born to an Indian mother, Mrs. Tavleen Singh and a Pakistani father, Mr. Salmaan
+Taseer). In fact, Mr. Salmaan was one of the most liberal politicians of Pakistan,
+leading to his &lt;a href=&quot;https://foreignpolicy.com/2011/01/04/pakistans-dangerous-blasphemy-laws-claim-the-governor-of-punjab/&quot;&gt;assassination in 2011 because of his strong opinions on Blasphemy
+Laws in Pakistan&lt;/a&gt; and his mother, &lt;a href=&quot;https://twitter.com/tavleen_singh/status/1126665638582177792&quot;&gt;Mrs. Tavleen appeers to be a Modi supporter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This was the journey of the TIME magazine - from being used as a source for
+asking resignation of a Prime Minster in 2012 to being stamped as an
+anti-nationalist, anti-hindu, pro-Pakistani and pro-Congress magazine - which
+cannot be trusted at all.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-rise-of-authoritarianism&quot;&gt;The Rise of authoritarianism&lt;/h2&gt;
+
+&lt;p&gt;For the past few years, there has been a shift in governance model and their
+policy and stance on failures - furthering more and more towards
+authoritarianism. Anyone who dare questions them or speaks against them is
+drafted ‘anti-national’ and crazy as it might sound - ‘anti-hindu’. First comes
+hate speech, death threats and trolling for propaganda. Even then, if someone
+doesn’t stop, then, if they are lucky, &lt;a href=&quot;https://www.ndtv.com/india-news/sedition-case-registered-against-arundhati-roy-geelani-440611&quot;&gt;they are charged with sedition&lt;/a&gt; &lt;label for=&quot;sn-id-sedition&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-sedition&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Arundhati Roy, Kanhaiya Kumar, Umar Khalid, Aseem
+Trivedi are just a few famous names who have been charged with sedition,
+primarily because they spoke against the ruling party. It’s ironic that this
+draconian law was used by the British to suppress the freedom movement. &lt;/span&gt;, or
+else they are &lt;a href=&quot;https://www.india.com/news/india/jnu-row-pro-bjp-lawyers-admit-thrashing-kanhaiya-kumar-inside-police-custody-till-he-wet-his-pants-watch-video-971691/&quot;&gt;either dealt with violence&lt;/a&gt; - &lt;a href=&quot;https://indianexpress.com/article/india/india-news-india/jnu-kanhaiya-kumar-patiala-house-court-lawyers-media-attacked/&quot;&gt;lynched by a mob &lt;/a&gt;,
+&lt;a href=&quot;https://www.hindustantimes.com/india-news/anyone-speaking-against-bjp-rss-is-silenced-sonia-rahul-on-gauri-lankesh-s-murder/story-Z240UB6qkxJnzcTD9rzYmO.html&quot;&gt;assassinated&lt;/a&gt; or &lt;a href=&quot;https://indianexpress.com/article/india/india-news-india/behind-dalit-student-suicide-how-his-university-campus-showed-him-the-door/&quot;&gt;forced to commit suicide&lt;/a&gt; (which the government
+officials would then put up a huge mournful act to).&lt;/p&gt;
+
+&lt;p&gt;The cases for all these victims was made further down by defaming them across
+mainstream media portraying them as criminals or associating them with terrorist
+organizations, which brings me to my second point…&lt;/p&gt;
+
+&lt;h2 id=&quot;freedom-of-the-press&quot;&gt;Freedom of The Press&lt;/h2&gt;
+
+&lt;p&gt;It isn’t just the voice of the student leaders and activists which is silenced,
+but even the mainstream media journalists are being denied their right to free
+speech.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.hindustantimes.com/india-news/anyone-speaking-against-bjp-rss-is-silenced-sonia-rahul-on-gauri-lankesh-s-murder/story-Z240UB6qkxJnzcTD9rzYmO.html&quot;&gt;Gauri Lankesh, one of the top political journalists of India was shot dead
+outside her house&lt;/a&gt; because she was an outspoken critic of
+right-wing-‘hindutva’-politics and was present at the forefront of many
+protests, including the protest against the smearing of Kannada writer Yogesh
+Master’s face with black ink.&lt;/p&gt;
+
+&lt;p&gt;When Punya Prasun Bajpayi, in his show &lt;em&gt;Masterstroke&lt;/em&gt; uncovered some false
+claims made by Prime Minister regarding a rural lady by interviewing her, TV
+screens &lt;a href=&quot;https://scroll.in/article/889026/resignations-of-two-journalists-at-abp-news-cause-disquiet-in-newsrooms-and-far-beyond&quot;&gt;were blackened out&lt;/a&gt; for the consequent episodes for his show in many
+parts of the nation. This political pressure on ABP news further lead to
+&lt;a href=&quot;https://scroll.in/article/889026/resignations-of-two-journalists-at-abp-news-cause-disquiet-in-newsrooms-and-far-beyond&quot;&gt;resignation of ABP’s network managing editor, Milind Khandekar&lt;/a&gt;, closely
+followed by Bajpayi’s own. After this round of resignations, another journalist
+at the network &lt;a href=&quot;https://www.newslaundry.com/shorts/abp-news-abhisar-sharma-resigns&quot;&gt;Abhisar Sharma went for leave&lt;/a&gt; and &lt;a href=&quot;https://www.newslaundry.com/shorts/abp-news-abhisar-sharma-resigns&quot;&gt;finally resigned a few
+days later&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is an organized attack on media, disrupting any dialogue or questions in
+the matter of starvation deaths, unemployment, education affairs, farmer
+suicides, clean air and water.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://www.ndtv.com/opinion/modi-interviews-packed-with-lines-rg-could-never-get-away-with-2037244&quot;&gt;scripted interviews&lt;/a&gt; which our Prime Minister gives, all the
+while bluntly &lt;a href=&quot;https://www.thequint.com/elections/social-dangal/incredible-liar-twitter-pm-modi-email-digital-camera-1988&quot;&gt;blurting out lies, gibberish&lt;/a&gt; and &lt;a href=&quot;https://www.aljazeera.com/news/2019/05/laughing-matter-india-modi-mocked-tech-gaffes-190513091851774.html&quot;&gt;factually incorrect
+statements&lt;/a&gt;, would be comprised of questions aimed at reinforcing the
+propaganda amongst the masses.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;https://i.imgur.com/EQRoyEe.jpg&quot; /&gt;&lt;figcaption&gt;This is a mainstream media
+house - The job of these 'journalists' has crumbled to the extent that they now
+spend time on Kim Jong Un's wives rather than questioning or analyzing
+government policies, creating awareness or showing statistics about the current
+unemployment in India.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;India currently &lt;a href=&quot;https://rsf.org/en/india&quot;&gt;ranks 140 out of 180 countries on World Press Freedom
+Index&lt;/a&gt;, which is a disaster for the world’s largest democracy.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-can-we-do&quot;&gt;What can we do?&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/stNh_di8OM8?t=920&quot;&gt;In the words of Ravish Kumar&lt;/a&gt; (one of the handful journalists
+&lt;label for=&quot;sn-id-himmat&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-himmat&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Himmat, a magazine, edited by Rajmohan Gandhi, which maintained independence despite State repression [when Emergency was imposed during 1975] serves as a means of great inspiration for today’s journalists, to find ways to resist corporate control and to tell readers the truth. &lt;a href=&quot;https://scroll.in/article/735844/himmat-during-the-emergency-when-the-press-crawled-some-refused-to-even-bend&quot;&gt;Read complete story here&lt;/a&gt; &lt;/span&gt;
+who haven’t yet forgotten what journalism is and and still have the courage to raise the right
+questions):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ask questions. Questioning government is the highest service to the nation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Faiz_Ahmad_Faiz&quot;&gt;Faiz Ahmad Faiz&lt;/a&gt;, one of the most celebrated poets in Urdu literature,
+who was also a protagonist of the Progressive Movement of India (1936), wrote
+a &lt;a href=&quot;https://en.wikipedia.org/wiki/Nazm&quot;&gt;nazm&lt;/a&gt;: &lt;em&gt;“Bol ke Lab Aazad Hain Tere”&lt;/em&gt; &lt;label for=&quot;sn-id-safdar-hashmi&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-safdar-hashmi&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;When Safdar Hashmi, who later became a symbol of cultural resistance against
+authoritarianism for the Indian left, was murdered while performing his
+street-play ‘Halla Bol’ (Attack), Faiz’s nazm served a rallying cry for the
+protestors with each line followed by chanting ‘Halla Bol’. &lt;/span&gt; (English: Speak,
+for your lips are free), &lt;a href=&quot;https://kashmirlife.net/famous-faiz-poem-bol-ki-lab-azad-hein-teray-was-for-sheikh-abdullah-193424/&quot;&gt;possibly in the wake of Kashmir Liberation
+Movement&lt;/a&gt; dedicated to his friend and renowned music composer
+Arshad Mahmud, who was also his student and compatriot.&lt;/p&gt;
+
+&lt;p&gt;This nazm couldn’t be any more relevant today. Have a read for yourself (English translation below):&lt;/p&gt;
+
+&lt;div style=&quot;font-size:34px&quot;&gt;
+&lt;br /&gt;
+بول کہ لب آزاد ہیں تیرے
+&lt;br /&gt;
+&lt;br /&gt;
+بول زباں اب تک تیری ہے 
+&lt;br /&gt;
+&lt;br /&gt;
+تیرا ستواں جسم ہے تیرا 
+&lt;br /&gt;
+&lt;br /&gt;
+بول کہ جاں اب تک تیری ہے 
+&lt;br /&gt;
+&lt;br /&gt;
+دیکھ کہ آہن گر کی دکاں میں 
+&lt;br /&gt;
+&lt;br /&gt;
+تند ہیں شعلے سرخ ہے آہن 
+&lt;br /&gt;
+&lt;br /&gt;
+کھلنے لگے قفلوں کے دہانے 
+&lt;br /&gt;
+&lt;br /&gt;
+پھیلا ہر اک زنجیر کا دامن 
+&lt;br /&gt;
+&lt;br /&gt;
+بول یہ تھوڑا وقت بہت ہے 
+&lt;br /&gt;
+&lt;br /&gt;
+جسم و زباں کی موت سے پہلے 
+&lt;br /&gt;
+&lt;br /&gt;
+بول کہ سچ زندہ ہے اب تک 
+&lt;br /&gt;
+&lt;br /&gt;
+بول جو کچھ کہنا ہے کہہ لے 
+&lt;br /&gt;
+&lt;br /&gt;
+
+&lt;/div&gt;
+
+&lt;h3 id=&quot;english&quot;&gt;English:&lt;/h3&gt;
+&lt;p&gt;bol ki lab āzād haiñ tere&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Speak, for your lips are free&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;bol zabāñ ab tak terī hai&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Speak, your tounge is still your own&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;terā sutvāñ jism hai terā&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;That this frail body is still yours&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;bol ki jaañ ab tak terī hai&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Speak, your life is still your own&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;dekh ki āhan-gar kī dukāñ meñ&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;See how in the blacksmith’s forge&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;tund haiñ sho.ale surḳh hai aahan&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Flames leap high and steel glows red&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;khulne lage qufloñ ke dahāne&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Padlocks opening wide their jaws&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;phailā har ik zanjīr kā dāman&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Every chain’s embrace outspread!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;bol ye thoḌā vaqt bahut hai&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Time enough is this brief hour&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;jism o zabāñ kī maut se pahle&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Until body and tounge lie dead&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;bol ki sach zinda hai ab tak&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Speak, for the truth is living yet&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;bol jo kuchh kahnā hai kah le&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Speak whatever must be said!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It is rather pressing that we give a form factor to voice of Faiz and Ravish. I
+appeal that we, the citizens of India speak out, question the government, and
+spread awareness amongst our fellows citizens our rights.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 22 May 2019 00:00:00 +0530</pubDate>
+        <link>https://rj722.github.io/articles/19/freedom-of-speech</link>
+        <guid isPermaLink="true">https://rj722.github.io/articles/19/freedom-of-speech</guid>
+        
+        <category>history</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>A glimpse into the darkness: the 'Brutish' rule in India</title>
+        <description>&lt;p&gt;A second-generation freeborn attempts to understand the impact and aftermath of
+colonization of India by British. It turns out that even an educated Indian of
+today is still not aware of the atrocities and turmoil it caused the country.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;India - the golden bird of medieval times, known for it’s riches - the diamonds
+and the muslins, one of the world’s greatest exporter of silk - a country
+sharing a cut of more than 27% in the world’s economy during the sixteenth
+century - the country which was then capitalized for 200 years all the while
+feeding to the interests of Britain, leaving the post-British India with a
+crumbling share of a little more than 3% in the world GDP.&lt;/p&gt;
+
+&lt;p&gt;This is my country.&lt;/p&gt;
+
+&lt;p&gt;I am an Indian. This blog post highlights the pain it causes me that we, the
+youth of India - the second-generation freeborn aren’t afflicted by this dark
+side of the history, and how our education [A British establishment] merely
+portrays colonization as a chronological series, celebrating the independence and
+mapping it with subsequent post-independence failures. There is none or timid
+attempt made to lay emphasis on the curtailed legacy of India, the utter
+amorality of the British rule or the atrocities imposed on our forefathers
+without scruple or principle. This case of insincerity has lead to an incomplete
+analysis of the deep wounds of the colonization and of finding a cure.&lt;/p&gt;
+
+&lt;p&gt;On the contrary, the notions about how the British brought industrialization to
+India, how trains were supposedly a precious ‘gift’, and how British were key to
+the political ‘unification’ of India are quite popular.&lt;/p&gt;
+
+&lt;p&gt;But recently coming across an Oxford Union Debate by Dr. Shashi Tharoor, a
+novelist, diplomat and Indian politician, on the proposition “Britain Owes
+Reparations to her Former Colonies” - which he admissibly won with his
+characteristically impassioned and precisely argued speech - was an eye-opening
+experience, which lead me to further pursue the topic.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-debate&quot;&gt;The Debate&lt;/h2&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;iframe width=&quot;70%&quot; height=&quot;533&quot; src=&quot;https://www.youtube.com/embed/f7CW7S0zxv4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+After the debate, Tharoor left England (in his own words, “pleased enough, but
+without giving the proceedings a second thought”). However, a couple of months
+later, once the speech was posted online, it took on an almost surreal
+afterlife, not only going viral across various social media platforms and
+causing many a storm in chai cups across the sub-continent and Britain, but also
+managed to unite, in India, the old and the young, the radical and the
+conservative, and most uniquely, the ever-estranged political left, right, and
+centre of our country in unequivocal approbation.&lt;/p&gt;
+
+&lt;p&gt;On this, says Tharoor&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Yet the fact that my speech struck such a chord with so many listeners
+suggested that what I considered basic was unfamiliar to many, perhaps most,
+educated Indians. They reacted as if I had opened their eyes, instead of
+merely reiterating what they had already known.&lt;/p&gt;
+
+  &lt;p&gt;It was this realisation that prompted my friend and publisher, David Davidar,
+to insist I convert my speech into a short book – something that could be read
+and digested by a layman but also be a valuable source of reference to
+students and others looking for the basic facts about India’s experience with
+British colonialism. The moral urgency of explaining to today’s Indians – and
+Britons – why colonialism was the horror it turned out to be could not be put
+aside.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;the-book&quot;&gt;The Book&lt;/h2&gt;
+
+&lt;p&gt;He indeed did gift India with his book “An Era of Darkness” deconstructing the
+british rule, unfolding around various themes: Of loot and of the hemorrhaged
+Indian wealth, of the increased rural poverty, the nefarious British policies
+(like divide-and-rule) which continue to haunt the contemporary India to date,
+the famines and the holocausts, and &lt;em&gt;of course&lt;/em&gt; Cricket.&lt;/p&gt;
+
+&lt;p&gt;The book provides as a leaping point, marking a paradigm shift forward so that
+the Youth of India knows the importance of the past and of talking about it, if
+only to unpick its skein better – but to do it yet, with a sense of irony and
+wisdom.&lt;/p&gt;
+
+&lt;h3 id=&quot;tldr&quot;&gt;TLDR;&lt;/h3&gt;
+
+&lt;p&gt;An Era of Darkness, by Shashi Tharoor is a must read!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 May 2019 00:00:00 +0530</pubDate>
+        <link>https://rj722.github.io/articles/19/a-glimpse-into-the-darkness</link>
+        <guid isPermaLink="true">https://rj722.github.io/articles/19/a-glimpse-into-the-darkness</guid>
+        
+        <category>history</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Do we really need to cover coverage with Vulture?</title>
+        <description>&lt;p&gt;The team behind Vulture (a tool used for detecting unused Python code) decided
+not to integrate it with coverage (a tool for measuring code coverage of Python
+programs). Read why!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;coverage---wow-so-accurate---we-need-it&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;coverage&lt;/code&gt; - wow, so accurate - we need it…?&lt;/h2&gt;
+
+&lt;p&gt;When this phase kicked in, I was still wrapping my head around coverage - My
+plan was to get coverage integrated with Vulture, which would allow users to
+“transfer” the results from coverage to Vulture so that the false positives were
+automatically detected and thereby supressed. It sounded so neat and moreso
+doable (using an interminnent xml file) and so naturally, I just quickly got
+down to nuts and bolts and started a Pull Request. But, alongst those splendid
+colors of awesome functionality, Jendrik comes in and talks a bunch on why we
+shouldn’t do it. I could extrapolate the following reasons:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;We already created an easier, dynamic and robust way to create and manage
+whitelists (&lt;code class=&quot;highlighter-rouge&quot;&gt;--make-whitelist&lt;/code&gt;) which shall eliminate the need of having 10
+different things for dealing with false positives.&lt;/li&gt;
+  &lt;li&gt;Coverage is a tool for dynamic analysis (which requires your code to be
+actually run) and is therefore slow, but gives much more accurate results.
+And, if we already have results from coverage, why would we then need Vulture
+for??&lt;/li&gt;
+  &lt;li&gt;Vulture is supposed to be a static analysis tool.&lt;/li&gt;
+  &lt;li&gt;Vulture would’ve no longer been independent of external modules.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But, still it struck me as a little odd at that time because I thought that the
+functionality was optional and if someone didn’t want it, he would simply just
+not use it - simple. By now, may be you’ve judged that that this was the
+&lt;em&gt;“feature syndrome”&lt;/em&gt; talking (The more features we have, the more usable we are)
+and yes, you’re right. Luckily, Jendrik foresaw this early and redirected me
+towards &lt;a href=&quot;this blog post&quot;&gt;http://neugierig.org/software/blog/2018/07/options&lt;/a&gt;
+which explains why it’s actually toxic for anything to have more “options” and
+how it was an expensive process in terms of time spent on writing, documenting
+and maintaining it.&lt;/p&gt;
+
+&lt;p&gt;I’m very thankful of Jendrik and proud of the fact that we’ve still managed to
+keep the workflow involved when using &lt;code class=&quot;highlighter-rouge&quot;&gt;Vulture&lt;/code&gt; as simple as it could get. :-)&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 Aug 2018 00:00:00 +0530</pubDate>
+        <link>https://rj722.github.io/articles/18/cover-coverage-vulture</link>
+        <guid isPermaLink="true">https://rj722.github.io/articles/18/cover-coverage-vulture</guid>
+        
+        <category>vulture</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
   </channel>
 </rss>

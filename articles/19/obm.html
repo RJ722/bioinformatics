@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Operation Blue Moon</title>
+  <meta name="description" content="It’s been a couple of years since I read “i want 2 do project tell me wat 2 do”, which then landed me on the home page of Operation Blue Moon (OBM), a projec...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="https://rj722.github.io/articles/19/obm">
+
+  <link rel="alternate" type="application/rss+xml" title="Rahul Jha" href="https://rj722.github.io/feed.xml" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881917-2"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'UA-113881917-2');
+  </script>
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/"><img class="badge" src="/assets/img/badge_1.png" alt="CH"></a>
+	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/">RJ722's blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/newsletter/">Newsletter</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/css/print.css"></a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/pubkey"></a>
+		    
+	    
+  	
+		
+  	
+	</nav>
+</header>
+    <article class="group">
+      <h1>Operation Blue Moon</h1>
+<p class="subtitle">July 12, 2019</p>
+
+<p>It’s been a couple of years since I read <a href="http://www.shakthimaan.com/what-to-do.html">“i want 2 do project tell me wat 2 do”</a>, which then landed me on the home page of <a href="https://gitlab.com/shakthimaan/operation-blue-moon/">Operation Blue Moon (OBM)</a>, a project run single-handedly by the author of the book - <a href="http://shakthimaan.com/">Shakthi Kannan (mbuf)</a>. It is aimed towards time management and getting things done.</p>
+
+<p>The project not only borrows it’s name, but also the spirit of discipline, from our miliary counterparts. The practices here, built upon Shakthi’s years of experience of dealing with people trying, and failing, and learning from their mistakes, regarding time management.</p>
+
+<!--more-->
+
+<!--
+DISCLAIMER: With this blog, I mean to give an overview of what were my takeaways
+with OBM, in no way this serves as a definitive guide about how you should go about
+attempting it. One thing is for sure,
+-->
+
+<p>OBM, at it’s core, provides one with a framework (the ability to define WHY, WHAT,
+WHEN and HOW) to align their thoughts, expectations and action practically,
+along with the ability to monitor your success. How does it do so? Read on.</p>
+
+<blockquote>
+  <p>It’s difficult. It’s this difficulty that creates the scarcity and you, the winner.</p>
+</blockquote>
+
+<p>Every participant of OBM has a <code class="highlighter-rouge">plan</code> file <label for="sn-id-plan" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-id-plan" class="margin-toggle" /><span class="sidenote">every plan
+is inside a particular track (theme), eg. data scientist, devops, etc. - this
+serves as WHY </span> (an emacs org file), which enlists their goals - long term,
+short term, secondary, etc. - all goals - The WHAT.</p>
+
+<p>Then, under each subsequent heading, define what tasks do you need to do in
+order to achieve that goal - The HOW. The tasks have the following propoerties:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*** TODO Write one blog post
+    :PROPERTIES:
+    :ESTIMATED: 3
+    :ACTUAL:
+    :OWNER: RJ722
+    :ID: WRITE.1562247371
+    :TASKID: WRITE.1562247371
+    :END:
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">ESTIMATED</code> - The time you estimate you would take for completing the task.</p>
+
+<p><code class="highlighter-rouge">ACTUAL</code> - The actual amount it takes for you to complete it.</p>
+
+<p><code class="highlighter-rouge">OWNER</code>, <code class="highlighter-rouge">ID</code> and <code class="highlighter-rouge">TASKID</code> are there for better visualizations. (more on this
+later)</p>
+
+<p>I’ve the following function (courtesy of <a href="http://shakthimaan.com/">mbuf</a>) in my
+<a href="http://spacemacs.org/">spacemacs</a> config to help me generate these tasks:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+  (define-skeleton insert-org-entry
+    "Prompt for task, estimate and category"
+    nil
+    '(setq task  (skeleton-read "Task: "))
+    '(setq estimate  (skeleton-read "Estimate: "))
+    '(setq category (skeleton-read "Category: "))
+    '(setq timestamp (format-time-string "%s"))
+    "*** TODO " task \n
+    ":PROPERTIES:" \n
+    ":ESTIMATED: " estimate \n
+    ":ACTUAL:" \n
+    ":OWNER: RJ722" \n
+    ":ID: " category "." timestamp \n
+    ":TASKID: " category "." timestamp \n
+    ":END:")
+</code></pre></div></div>
+
+<p>The more important question is WHEN. Here’s where the ‘sprints’ chime-in. If
+you’re participating in OBM, you’re always sprinting (which makes perfect sense,
+since ideally you wouldn’t want yourself ‘unmanaging’ your time). A sprint,
+generally lasts for around 14-18 days. Before the sprint starts, move the tasks
+you want to get done in that sprint, under it’s ‘tab’ (which exists in the plan
+file, <a href="https://gitlab.com/shakthimaan/operation-blue-moon/blob/master/plan/data-scientist/RJ722.org">an example here</a>). You also need to enter an average amount
+of time you can dedicate on a per day basis for this sprint.</p>
+
+<p>Shakthi would then move such tasks from all participants to a file dedicated to
+that sprint. The participants can now clock their tasks (track the amount of
+time they have spend doing each of these tasks) - in emacs’ org mode
+(<code class="highlighter-rouge">org-clock-in</code>, <code class="highlighter-rouge">org-clock-out</code>).</p>
+
+<p>If you have done everything until now correctly, you should have a holistic view
+of how well your performance was for the last sprint. And, <em>this</em> is the most
+important step. Introspection - See what you did you wrong, what factor did you
+forget to take into account - how much was the difference between the actual and
+expected time of completion. Were you not able to complete all the tasks - why?
+what could you do to improve your estimates?</p>
+
+<p>You don’t even have to do this formally (although, it helps). Just doing the
+work, clocking it, and sending it over is enough to spark an introspective
+impulse. Just stick with the plan long enough and you’d see improvements. You’d
+see major improvements. I want to attribute the reason for OBM’s success to
+it’s simplicity, but it really is the discipline, showing up everyday and doing
+the work.</p>
+
+<p>If you currently find yourself in a position, where it feels like you’re stuck -
+you know what you want to do, but there’s this ‘something’ stopping you, and it
+feels forever since you’ve been wanting to do this thing, but there’s been no
+tangible progress so far. Well, then OBM is exactly the right thing for you.
+With this framework, you’re forced to formalize things, diagnose the ‘something’
+stopping you, make changes to your current schedule and to see the different
+between the direction you aim to go towards and the one where you’re heading
+(with your current planning).</p>
+
+<p>Lastly, I want to thank <a href="http://shakthimaan.com/">Shakthi</a> for all the energy and
+motivation he’s been pumping into the project himself. Thank you so much
+Shakthi!</p>
+
+<p>Have fun experiencing OBM!</p>
+
+
+
+
+    </article>
+    <span class="print-footer">Operation Blue Moon - July 12, 2019 - Rahul Jha</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="/newsletter"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/rahul722j"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/RJ722"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2020 &nbsp;&nbsp;RAHUL JHA</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for Musings of RJ722 </a> in <a href="//jekyllrb.com">Jekyll</a>.</span>
+</div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Using Weechat with Glowing Bear for IRC</title>
+  <meta name="description" content="Last  month, I had a new addition to my toolbox - GlowingBear, which has been a really nice improvement, allowing me to accessWeechat (hosted on a server) th...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="https://rj722.github.io/articles/19/using-weechat-with-glowing-bear">
+
+  <link rel="alternate" type="application/rss+xml" title="Rahul Jha" href="https://rj722.github.io/feed.xml" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881917-2"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'UA-113881917-2');
+  </script>
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/"><img class="badge" src="/assets/img/badge_1.png" alt="CH"></a>
+	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/">RJ722's blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/newsletter/">Newsletter</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/css/print.css"></a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/pubkey"></a>
+		    
+	    
+  	
+		
+  	
+	</nav>
+</header>
+    <article class="group">
+      <h1>Using Weechat with Glowing Bear for IRC</h1>
+<p class="subtitle">July 2, 2019</p>
+
+<p><span class="newthought">Last</span>  month, I had a new addition to my toolbox - <a href="https://www.glowing-bear.org/#!/">Glowing
+Bear</a>, which has been a really nice improvement, allowing me to access
+Weechat (hosted on a server) through my browser. Here’s how I set it up.</p>
+
+<!--more-->
+
+<p>But, before we begin - the curious folks might ask, <i>“What had you been using
+all this time?”</i></p>
+
+<p>Previously, I could directly ssh <label for="ssh-id" class="margin-toggle sidenote-number"></label><input type="checkbox" id="ssh-id" class="margin-toggle" /><span class="sidenote">using mosh - mobile
+shell, which supports intermittent connectivity, which is to say that it allows
+me to retain the session if the network breaks in between. </span> into my server,
+and attach to a <a href="https://www.gnu.org/software/screen/"><code class="highlighter-rouge">screen</code></a> session which ran weechat, using the command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mosh USERNAME@SERVER_IP -- screen -D -RR weechat
+</code></pre></div></div>
+
+<p><i> “This is pretty neat, why would you want to change it? </i></p>
+
+<p>“Latency”  -  It was not pleasant, so much so, that I started running two
+instances of weechat - one locally for chatting, and the one on the
+server for listening to messages when AFK <label for="" class="margin-toggle sidenote-number"></label><input type="checkbox" class="margin-toggle" /><span class="sidenote"><strong>A</strong>way <strong>F</strong>rom
+<strong>K</strong>eyboard </span>. It was getting pretty unmanageable, so I decided to look for
+alternatives. Luckily, one of my friends, <a href="https://blog.lazkani.io/about_me/">Armageddon</a>, pointed me
+towards <a href="https://www.glowing-bear.org/#!/"> Glowing Bear </a> - which provides a nice web frontend to weechat.</p>
+
+<h2 id="setting-up-glowing-bear">Setting Up Glowing Bear</h2>
+
+<p>Glowing Bear has pretty decent documentation available at
+<a href="https://www.glowing-bear.org/#!/">https://www.glowing-bear.org/#!/</a>.</p>
+
+<p>The basic architecture is somewhat similar to the <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern"> pub-sub architecure
+</a> - weechat ‘relays’ (publishes) all messages at a particular port on
+a machine where glowing bear can then ‘listen’ for the messages (subscribe).</p>
+
+<p><i> “Can’t other people listen to my messages?” </i></p>
+
+<p>If you’re running glowing bear with a local instance of weechat, you shouldn’t
+worry too much. However, if connecting to a remote instance, you must encrypt
+all communications between your browser and WeeChat.</p>
+
+<p>Since <a href="https://www.glowing-bear.org/#!/">Glowing Bear</a> uses TLS for encryption, it means that we need to put
+up a signed certificate. They recommend using <a href="https://letsencrypt.org/">Let’s Encrypt</a> for
+getting a certificate, which is really easy. Just install <a href="https://certbot.eff.org/">certbot</a> and
+run:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>certbot certonly --standalone -d DOMAIN_NAME
+</code></pre></div></div>
+
+<p>Once the certificates are generated, the only thing was to make them
+visible to weechat:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">mkdir</span> <span class="nt">-p</span> ~username/.weechat/ssl
+<span class="nb">cat</span> /etc/letsencrypt/live/DOMAIN_NAME/<span class="o">{</span>fullchain,privkey<span class="o">}</span>.pem <span class="o">&gt;</span> ~username/.weechat/ssl/relay.pem
+<span class="nb">chown</span> <span class="nt">-R</span> username:username ~username/.weechat/ssl/
+</code></pre></div></div>
+
+<p>Now, the only issue with me was that I did not have superuser access to the box
+I was running weechat into, and therefore could not access cert files. But,
+After talking to my wonderful host at <a href="https://wwww.insomnia247.nl">insomnia247.nl</a>:
+<a href="https://git.insomnia247.nl/coolfire">coolFire</a>, I came to know that certificates I’m using for my Apache VHost
+should be enough to encrypt my communication (through port 443) and I need not
+start an encrypted relay from weechat. coolFire was also gracious enough to
+throw in some voodoo <label for="voodoo-id" class="margin-toggle sidenote-number"></label><input type="checkbox" id="voodoo-id" class="margin-toggle" /><span class="sidenote">of course, by which I mean that I didn’t
+understand it </span> and give me a custom URL for running my weechat instance.</p>
+
+<p>Now, let’s start a WeeChat relay:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+/set relay.network.password y0ur_StRonG-pa$sw0rd:of*choice
+/relay add weechat 9001 # Note that this is NOT encrypted.
+</code></pre></div></div>
+
+<p>For connecting to Glowing Bear, I use port 443 - which allows me to encrypt my
+connection. Note that this isn’t entirely safe, because the fellow users on my
+host can still monitor port 9001, which is unecrypted and only protected by a
+password. But, I can manage this level of risk! :-)</p>
+
+<h2 id="icing-over-cake">Icing over cake</h2>
+
+<p>I run glowing bear on qutebrowser, through which I can access the whole interface
+without ever having to leave the comfort of my keyboard. \o/</p>
+
+<h2 id="further-todos">Further TODO’s</h2>
+
+<p>Glowing Bear’s notification system is a little weird - it just stops notifying
+me out of the blue. Remember my friend, <a href="https://blog.lazkani.io/about_me/">Armagaeddon</a> - he actually
+has a weechat plugin for channeling remote notifications to local systems, but
+it turned out that the script will take some additional work to work with macOS.</p>
+
+<p>Another thing that I want to do is employ a chat logger - I’ve had some pretty
+interesting conversation with people, and they just wash away as soon as I
+restart weechat. This should be pretty easy to do, but I’ve had too much on my
+plate to care right now.</p>
+
+
+
+
+    </article>
+    <span class="print-footer">Using Weechat with Glowing Bear for IRC - July 2, 2019 - Rahul Jha</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="/newsletter"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/rahul722j"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/RJ722"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2020 &nbsp;&nbsp;RAHUL JHA</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for Musings of RJ722 </a> in <a href="//jekyllrb.com">Jekyll</a>.</span>
+</div>
+</footer>
+
+  </body>
+</html>
