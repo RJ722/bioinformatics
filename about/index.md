@@ -68,7 +68,7 @@ due to logistics. -->
 
 I love tweaking themes and desktop environments until I make them ugly.
 
-I can touch type with an average speed of around 60-65 WPM.
+I can touch type with an average speed of around 80-85 WPM.
 
 I like Urdu shayari.
 
